@@ -62,7 +62,7 @@
                                                     <tr>
                                                         <td>Total Revenue</td>
                                                       <td>
-                                                      {{number_format($lubebay_data['revenue'],2)}}
+                                                      {{$lubebay_data['revenue']}}
                                                       </td>
                                                       <td>
                                                       - 
@@ -79,10 +79,10 @@
                                                       -
                                                       </td>
                                                       <td>
-                                                       {{number_format($lubebay_data['expenses'],2)}}
+                                                       {{$lubebay_data['expenses']}}
                                                       </td>
                                                       <td>
-                                                      <a href="{{url('/lubebay/expense/view-expenses/'.$lubebay->id)}}" >View all tranactions</a>
+                                                      <a href="{{url('/accounts/view-account/'.$lubebay->account->id)}}" >View all tranactions</a>
                                                       </td>                                                  
                                                    
                                                       

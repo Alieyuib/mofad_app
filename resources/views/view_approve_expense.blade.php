@@ -85,22 +85,19 @@
                                                         <td>
                                                         {{$expense->created_at}}
                                                         </td>
-                                                        
                                                         <td>
                                                         @if($expense->approval->l1!=0)
                                                                 {{$expense->approvedBy('l1')}}
                                                             
                                                             @else
-                                                                @can('approve_expense_l1')
-                                                                    @include('includes.approve_form',['action'=>'/approve-expense','process_id'=>$expense->id,'process_type'=>'EXPENSE','level'=>'l1'])
-                                                                    <br>
-                                                                    @include('includes.decline_form',['action'=>'/approve-expense','process_id'=>$expense->id,'process_type'=>'EXPENSE','level'=>'l1'])
-                                                                @endcan    
+                                                                @include('includes.approve_form',['action'=>'/approve-expense','process_id'=>$expense->id,'process_type'=>'EXPENSE','level'=>'l1'])
+                                                                <br>
+                                                                @include('includes.decline_form',['action'=>'/approve-expense','process_id'=>$expense->id,'process_type'=>'EXPENSE','level'=>'l1'])
+                                                                
                                                             
                                                             @endif
                                                                 
                                                         </td>
-                                                        
                                                         
                                                         
                                                         </tr>

@@ -163,7 +163,12 @@
                                                     |
                                                 @else
                                                 
-                                                   
+                                                    <label>
+                                                        
+                                                        <input  name="lubebays[]" value="{{$lubebay->id}}"  type="checkbox"  />
+                                                    <span>{{$lubebay->name}}</span>
+                                                    </label> 
+                                                    |
                                                 @endif
                                             </p>
                                             @endforeach

@@ -8,7 +8,6 @@ use App\Models\Pro;
 use App\Models\Product;
 use App\Models\Service;
 use App\Models\Lubebay;
-use App\Models\LubebayExpense;
 use App\Models\Substore;
 use App\Models\SubstoreInventory;
 use App\Models\Warehouse;
@@ -40,26 +39,16 @@ class ReportsController extends Controller
     public function lubebayIncomeStatement(Lubebay $lubebay, Request $request ){
        $account = $lubebay->account;
        //return $account->transactions;
-
        $view_data['lubebay'] = $lubebay;
        $lubebay_data = ['expenses'=>0,'revenue'=>0] ;
        foreach ($account->transactions as $transaction) {
            if ($transaction->transaction_type=='CREDIT') {
                $lubebay_data['revenue'] += $transaction->amount;
            }
-           //debit transactiona re currently captured on the expenses table for lubebays
            elseif($transaction->transaction_type=='DEBIT') {
             $lubebay_data['expenses'] += $transaction->amount;
            }
        }
-      
-    //Refractor code below to use $lubebay->expense(). debug funtion.
-       $lubabay_expenses = LubebayExpense::where( 'lubebay_id', $lubebay->id )->get();
-       //added to capture expenses from the expenses table 
-       foreach ($lubabay_expenses as $luebbay_expense) {
-         $lubebay_data['expenses'] += $luebbay_expense->amount;
-       }
-
        $view_data['lubebay_data'] = $lubebay_data;
        return view('report_lubebay_income_statement',$view_data);
     }
@@ -219,16 +208,15 @@ class ReportsController extends Controller
         }
         
         elseif( $request->isMethod("post") && $request->input('report_type')=='substore_sales'){
-            $start_date = Carbon::create($request->input('start_date'),0); 
-            $end_date = Carbon::create($request->input('end_date'),0);
+
             //todo
             //generate and populate rows 
             $request->validate([
-                'start_date' => 'required',
-                'end_date' => 'required',
+                'month' => 'required',
                 'substore' => 'required',
+                'year'  => 'required'
             ]);
-            //$report_year = $request->input('year');
+            $report_year = $request->input('year');
 
             $data[ ] = ['', '', '', '', '', ''];
             $data[ ] = ['', '', '', '', ''];
@@ -238,13 +226,13 @@ class ReportsController extends Controller
             $data[ ] = ['', '', ''];
             
             $substore =  Substore::find($request->input('substore'));
-            // $start_date = Carbon::create($report_year, $request->input('month') , 1)->startOfMonth();
-            // $end_date = Carbon::create($report_year, $request->input('month') , 1)->endOfMonth();
+            $start_of_month = Carbon::create($report_year, $request->input('month') , 1)->startOfMonth();
+            $end_of_month = Carbon::create($report_year, $request->input('month') , 1)->endOfMonth();
 
             $dateinterval = new CarbonPeriod(
-                $start_date,
+                $start_of_month,
                 '1 day',
-                $end_date
+                $end_of_month
             ); 
              
             //$revdate = Carbon::create(2020, 9 , 26);
@@ -261,8 +249,8 @@ class ReportsController extends Controller
            
             $substore_products = Product::all()->whereIn('id',SubstoreInventory::all()->pluck('product_id')->toArray());
             foreach ($substore_products as $substore_product) {
-                $product_sale_quantity = $substore->productSalesQuantity($substore_product->id,$start_date , $end_date);
-                $product_sale_value = $substore->productSalesValue($substore_product->id,$start_date, $end_date);
+                $product_sale_quantity = $substore->productSalesQuantity($substore_product->id,$start_of_month , $end_of_month);
+                $product_sale_value = $substore->productSalesValue($substore_product->id,$start_of_month, $end_of_month);
                
                 $substore_products_totals[$substore_product->id]['product_name'] =  $substore_product->name();
                 $substore_products_totals[$substore_product->id]['product_cost'] =  $substore_product->cost_price;
@@ -370,21 +358,20 @@ class ReportsController extends Controller
 
 
             $export = new ReportExport($data);
-            return Excel::download($export, $substore->name.'-lubricantsales'.$start_date->format("M-Y").'.xlsx');
+            return Excel::download($export, $substore->name.'-lubricantsales'.$start_of_month->format("M-Y").'.xlsx');
 
 
         }
         elseif( $request->isMethod("post") && $request->input('report_type')=='lubebay_service_sales'){
-            $start_date = Carbon::create($request->input('start_date'),0); 
-            $end_date = Carbon::create($request->input('end_date'),0);
+
             //todo
             //generate and populate rows 
             $request->validate([
-                'start_date' => 'required',
-                'end_date' => 'required',
+                'month' => 'required',
                 'lubebay' => 'required',
+                'year' => 'required'
             ]);
-           // $report_year = $request->input('year');
+            $report_year = $request->input('year');
 
             $data[ ] = ['', '', '', '', '', ''];
             $data[ ] = ['', '', '', '', ''];
@@ -394,13 +381,13 @@ class ReportsController extends Controller
             $data[ ] = ['', '', ''];
             
             $lubebay =  Lubebay::find($request->input('lubebay'));
-            //$start_date = Carbon::create($report_year, $request->input('month') , 1)->startOfMonth();
-            //$end_date = Carbon::create($report_year, $request->input('month') , 1)->endOfMonth();
+            $start_of_month = Carbon::create($report_year, $request->input('month') , 1)->startOfMonth();
+            $end_of_month = Carbon::create($report_year, $request->input('month') , 1)->endOfMonth();
 
             $dateinterval = new CarbonPeriod(
-                $start_date,
+                $start_of_month,
                 '1 day',
-                $end_date
+                $end_of_month
             ); 
              
             //$revdate = Carbon::create(2020, 9 , 26);
@@ -512,7 +499,7 @@ class ReportsController extends Controller
             
 
             $export = new ReportExport($data);
-            return Excel::download($export, $lubebay->name.'-service_sales'.$start_date->format("M-Y").'.xlsx');
+            return Excel::download($export, $lubebay->name.'-service_sales'.$start_of_month->format("M-Y").'.xlsx');
 
 
         }

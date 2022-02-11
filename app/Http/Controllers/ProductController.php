@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\CustomerType;
 use App\Models\PriceScheme;
-use App\Models\Supplier;
 use App\Helpers\PostStatusHelper;
 
 use Illuminate\Support\Facades\Auth;
@@ -16,48 +15,8 @@ use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
-    public function createSupplier(Request $request){
-        $view_data['form_title'] =  'Create Supplier';
-        $view_data['form_action'] =  'admin/supplier/create';
-        $supplier = new Supplier;
-        $view_data['form_fields'] =  $supplier->formFields();
-        
-        $post_status = new PostStatusHelper;
-
-        if($request->isMethod('post'))
-        {
-            $request->validate([
-                'supplier'=>'required|string|max:50',
-                
-
-            ]);
-
-            //db related operations in transaction
-            DB::beginTransaction();
-            try{
-                $supplier = new Supplier;
-                $supplier->name = $request->input('supplier');
-                
-                $supplier->save();
-                $post_status->success();
-            }
-            catch(Exception $e){
-                DB::rollback();
-                $post_status->failed();
-                throw $e;
-            }
-            DB::commit();
-        }
-
-        $view_data['post_status'] = $post_status->post_status;
-        $view_data['post_status_message'] = $post_status->post_status_message;
-        
-        return view('crud_form',$view_data);
-
-    }
     public function createProduct(Request $request){
         $view_data['customer_types'] =  CustomerType::all();
-        $view_data['suppliers'] =  Supplier::all();
         $post_status = new PostStatusHelper;
 
         if($request->isMethod('post'))
@@ -67,7 +26,6 @@ class ProductController extends Controller
                 'product_description' =>'required',
                 'cost_price' => 'required|numeric',
                 'product_code' => 'required|string',
-                'supplier' => 'required|numeric',
                 //todo
                 //add validation for different price scheme
 
@@ -81,7 +39,6 @@ class ProductController extends Controller
                 $product->product_description = $request->input('product_description');
                 $product->cost_price = $request->input('cost_price');
                 $product->product_code = $request->input('product_code');
-                $product->supplier_id = $request->input('supplier');
                 $product->save();
                 
                 foreach(CustomerType::all() as $customer_type)

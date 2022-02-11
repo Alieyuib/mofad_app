@@ -1094,9 +1094,8 @@ class ApprovalController extends Controller
                 elseif($request->get('approval')=='DECLINE'){
                     DB::beginTransaction();
                     try
-                    {   $account_transaction = AccountTransaction::find($request->get('process_id'));
-                        $account = Account::find($account_transaction->account_id);
-                    
+                    {   $account_transaction = AccountTransaction::find($request->get('transaction_id'));
+                        
                         $account_transaction->current_approval='$level';
                         $account_transaction->approval_status='DECLINED';
                         $account_transaction->save();
@@ -1118,7 +1117,7 @@ class ApprovalController extends Controller
                     DB::commit();
                     $view_data['post_status'] = $post_status->post_status;
                     $view_data['post_status_message'] = $post_status->post_status_message;
-                    $view_data['lubebays_list'] = Auth::user()->allowedLubebays();
+                    $view_data['lubebays_list'] = Auth::user()->allowedLubebay();
                     return redirect('lubebay/lodgement/confirmation/'.$account->owner_id);
                 }    
             }
@@ -1134,9 +1133,9 @@ class ApprovalController extends Controller
         //approval/permission name and level syntax 
         // "approve_prf_".$level
         $level = $request->input('level');
-            $customer_account_transaction = CustomerTransaction::find($request->input('process_id'));
+        
 
-            if(Auth::user()->hasPermissionTo('approve_lodgement_'.$level) && $level > $customer_account_transaction->current_approval){
+            if(Auth::user()->hasPermissionTo('approve_lodgement_'.$level)){
                 if($request->get('approval')=='APPROVE')
                 {
                     
@@ -1144,7 +1143,7 @@ class ApprovalController extends Controller
                     DB::beginTransaction();
                     try
                     {   
-                        
+                        $customer_account_transaction = CustomerTransaction::find($request->input('process_id'));
                         $customer = $customer_account_transaction->customer;
                         $system_account = Account::where('account_type','STATE_LUBRICANT_SALES')->where('owner_id',$customer->state)->first();
                         $payment_amount = $customer_account_transaction->amount;

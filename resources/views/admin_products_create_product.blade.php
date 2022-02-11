@@ -34,26 +34,11 @@
                                                     <input type="text"  value="{{old('product_name')}}"  name="product_name" class="form-control" class="validate">
                                                     <label for="product_name">Product Name</label>
                                                 </div>
-                                                <div class="input-field col m4 s12">
-                                                
-                                                    <select name="supplier" id="supplier" class="form-control" class="validate">
-                                                       <option value="">Select Supplier</option>
-                                                        @foreach($suppliers as $supplier)
-
-                                                        <option value="{{$supplier->id}}"> {{$supplier->name}} </option>
-
-                                                        @endforeach
-                                                    </select>
-                                                </div>
-
-                                            </div>
-
-                                            <div id="main-form" class="row">    
-                                                <div class="input-field col m4 s12">
+                                                <div class="input-field col m2 s12">
                                                     <input type="text" min="0" value="{{old('product_description')}}"  name="product_description" class="form-control" class="validate">
                                                     <label for="product_description">Product Decription</label>
                                                 </div>
-                                                <div class="input-field col m4 s12">
+                                                <div class="input-field col m2 s12">
                                                     <input type="text" min="0" value="{{old('product_code')}}"  name="product_code" class="form-control" class="validate">
                                                     <label for="product_code">Product Code</label>
                                                 </div>
@@ -80,8 +65,6 @@
                                                 
                                             </div>
                                             @endforeach
-
-                                            
                                             
                                             </div>
                                             

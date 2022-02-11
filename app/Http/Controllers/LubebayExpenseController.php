@@ -6,7 +6,6 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 use Illuminate\Http\Request;
-use App\Models\Lubebay;
 use App\Models\LubebayExpense;
 use App\Models\LubebayExpenseType;
 use App\Models\Approval;
@@ -72,15 +71,9 @@ class LubebayExpenseController extends Controller
         return view('add_lubebay_expense',$view_data);
     }
 
-    public function lubebayView(Lubebay $lubebay){
+    public function lubebayView(){
         $view_data = [];
         $view_data['expense_types'] = LubebayExpenseType::all();
-        if ($lubebay){
-            $lubebays = [$lubebay->id];
-        }
-        else {
-            $lubebays = json_decode(Auth::user()->accessibleEntities()->lubebays);
-        }
         $view_data['expense_list'] = LubebayExpense::whereIn('lubebay_id',json_decode(Auth::user()->accessibleEntities()->lubebays))->get();
         return view('view_approve_lubebay_expense',$view_data);
     }

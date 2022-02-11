@@ -2,14 +2,6 @@
 
 @section('head')
     @parent()
-      <!-- BEGIN: VENDOR CSS-->
-   <link rel="stylesheet" type="text/css" href="{{asset('app-assets/vendors/vendors.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('app-assets/vendors/flag-icon/css/flag-icon.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('app-assets/vendors/data-tables/css/jquery.dataTables.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('app-assets/vendors/data-tables/extensions/responsive/css/responsive.dataTables.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('app-assets/vendors/data-tables/css/select.dataTables.min.css')}}">
-    <!-- END: VENDOR CSS-->
-
 @endsection()
 
 @section('side_nav')
@@ -104,14 +96,5 @@
 
 @section('footer_scripts')
 @parent()
- <!-- BEGIN PAGE VENDOR JS-->
- <script src="{{asset('app-assets/vendors/data-tables/js/jquery.dataTables.min.js')}}"></script>
-    <script src="{{asset('app-assets/vendors/data-tables/extensions/responsive/js/dataTables.responsive.min.js')}}"></script>
-    <script src="{{asset('app-assets/vendors/data-tables/js/dataTables.select.min.js')}}"></script>
-    <!-- END PAGE VENDOR JS-->
-
-   
-    <!-- BEGIN PAGE LEVEL JS-->
-    <script src="{{asset('app-assets/js/scripts/data-tables.js')}}"></script>
 @endsection
     

@@ -22,7 +22,7 @@ class Substore extends Model
     public function total_sales($start_time= null, $end_time = null){
         if($start_time==null && $end_time == null){
             $start_time= now()->startOfMonth()->startOfDay() ;
-            $end_time = now()->endOfMonth()->endOfDay() ;
+            $end_time = now()->endOfMonth()->startOfDay() ;
         }
         elseif($start_time==null && $end_time != null){
             $start_time = Carbon::create(2020, 1, 1, 0); //strtotime('2020-01-01 00:00:00');
@@ -46,8 +46,8 @@ class Substore extends Model
 
     public function total_lodgements($start_time= "", $end_time = "" ){
         if($start_time==null && $end_time == null){
-            $start_time= now()->startOfMonth()->startOfDay();
-            $end_time = now()->endOfMonth()->endOfDay();
+            $start_time= now()->startOfMonth();
+            $end_time = now()->endOfMonth();
         }
         elseif($start_time==null && $end_time != null){
             $start_time = strtotime('2020-01-01 00:00:00');

@@ -13,7 +13,7 @@ class CreatePro extends FormRequest
      */
     public function authorize()
     {
-        return true;
+        return false;
     }
 
     /**
@@ -23,18 +23,8 @@ class CreatePro extends FormRequest
      */
     public function rules()
     {
-        if($this->isMethod('post')){
-            $rules = [
-                //
-                'warehouse'=>'required',
-                'products.0'=>'required',
-                'quantity.0'=>'required'
-                
-            ];
-            return $rules;
-            }
-            else{
-                return [];
-            }
+        return [
+            //
+        ];
     }
 }

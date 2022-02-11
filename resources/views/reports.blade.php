@@ -82,14 +82,37 @@
                         </select>
                         </div>
 
-                        <div class="input-field col m4 s12">
-                                    <label class="bmd-label-floating">From: </label>
-                                    <input name="start_date"  value= "{{old('start_date')}}" type="date" placeholder="{{old('start_date')}}" class="form-control date-input" >   
+                        <div class="input-field col m4 s6">
+                        <select name="year" class="form-control  browser-default"> 
+                            <option value="">Select Year</option>
+                            <option value="1" {{ ( old('year') == 2021) ? "selected='selected'":""  }}>2021</option>
+                            <option {{ ( old('year') == 2020) ? "selected='selected'":""  }}value="2020">2020</option>
+                        </select>
                         </div>
-                        <div class="input-field col m4 s12">
-                                    <label class="bmd-label-floating">To: </label>
-                                    <input name="end_date" value= "{{old('end_date')}}" type="date" placeholder="" class="form-control date-input" >
+
+
+                        <div class="input-field col m4 s6">
+                        <select name="month" class="form-control  browser-default"> 
+                            <option value="">Select Month</option>
+                            <option value="1" {{ ( old('month') == 1) ? "selected='selected'":""  }}>January</option>
+                            <option {{ ( old('month') == 2) ? "selected='selected'":""  }}value="2">Ferbruary</option>
+                            <option {{ ( old('month') == 3) ? "selected='selected'":""  }}value="3">March</option>
+                            <option {{ ( old('month') == 4) ? "selected='selected'":""  }}value="4">April</option>
+                            <option {{ ( old('month') == 5) ? "selected='selected'":""  }}value="5">May</option>
+                            <option {{ ( old('month') == 6) ? "selected='selected'":""  }}value="6">June</option>
+                            <option {{ ( old('month') == 7) ? "selected='selected'":""  }}value="7">July</option>
+                            <option {{ ( old('month') == 8) ? "selected='selected'":""  }}value="8">August</option>
+                            <option {{ ( old('month') == 9) ? "selected='selected'":""  }}value="9">September</option>
+                            <option {{ ( old('month') == 10) ? "selected='selected'":""  }}value="10">October</option>
+                            <option {{ ( old('month') == 11) ? "selected='selected'":""  }}value="11">November</option>
+                            <option {{ ( old('month') == 12) ? "selected='selected'":""  }}value="12">December</option>
+                            
+                        
+
+                        </select>
                         </div>
+
+                        
 
                         <div class="input-field  col m4 s6">
                         <button class=" btn btn-primary green darken-3" type="submit"> Open</button>
@@ -125,16 +148,35 @@
                         </select>
                         </div>
 
-                       
-                        <div class="input-field col m4 s12">
-                                    <label class="bmd-label-floating">From: </label>
-                                    <input name="start_date"  value= "{{old('start_date')}}" type="date" placeholder="{{old('start_date')}}" class="form-control date-input" >   
-                        </div>
-                        <div class="input-field col m4 s12">
-                                    <label class="bmd-label-floating">To: </label>
-                                    <input name="end_date" value= "{{old('end_date')}}" type="date" placeholder="" class="form-control date-input" >
+                        <div class="input-field col m4 s6">
+                        <select name="year" class="form-control  browser-default"> 
+                            <option value="">Select Year</option>
+                            <option value="1" {{ ( old('year') == 2021) ? "selected='selected'":""  }}>2021</option>
+                            <option {{ ( old('year') == 2020) ? "selected='selected'":""  }}value="2020">2020</option>
+                        </select>
                         </div>
 
+
+                        <div class="input-field col m4 s6">
+                        <select name="month" class="form-control  browser-default"> 
+                            <option value="">Select Month</option>
+                            <option value="1" {{ ( old('month') == 1) ? "selected='selected'":""  }}>January</option>
+                            <option {{ ( old('month') == 2) ? "selected='selected'":""  }}value="2">Ferbruary</option>
+                            <option {{ ( old('month') == 3) ? "selected='selected'":""  }}value="3">March</option>
+                            <option {{ ( old('month') == 4) ? "selected='selected'":""  }}value="4">April</option>
+                            <option {{ ( old('month') == 5) ? "selected='selected'":""  }}value="5">May</option>
+                            <option {{ ( old('month') == 6) ? "selected='selected'":""  }}value="6">June</option>
+                            <option {{ ( old('month') == 7) ? "selected='selected'":""  }}value="7">July</option>
+                            <option {{ ( old('month') == 8) ? "selected='selected'":""  }}value="8">August</option>
+                            <option {{ ( old('month') == 9) ? "selected='selected'":""  }}value="9">September</option>
+                            <option {{ ( old('month') == 10) ? "selected='selected'":""  }}value="10">October</option>
+                            <option {{ ( old('month') == 11) ? "selected='selected'":""  }}value="11">November</option>
+                            <option {{ ( old('month') == 12) ? "selected='selected'":""  }}value="12">December</option>
+                            
+                        
+
+                        </select>
+                        </div>
                         <div class="input-field  col m4 s6">
                         <button class=" btn btn-primary green darken-3" type="submit"> Open</button>
                         </div>

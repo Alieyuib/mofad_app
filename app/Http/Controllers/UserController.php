@@ -211,8 +211,6 @@ class UserController extends Controller
     }
 
     public function assignUserAccesibleEntities(User $user, Request $request ){
-        //return $user->accessibleEntities;
-        
         $view_data = [];
         $view_data['user'] = $user;
         $view_data['roles_list'] = Role::all();
@@ -231,7 +229,7 @@ class UserController extends Controller
                     //todo
                     //check and validate roles before assigning
                 ]);
-                $user_accessible_entities = $user->accessibleEntities;
+                $user_accessible_entities = $user->accessibleEntities();
                 
                 $user_accessible_entities->warehouses = $request->input('warehouses','[]');
                 $user_accessible_entities->substores = $request->input('substores','[]');

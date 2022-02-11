@@ -18,7 +18,7 @@
         <div class="card">
             <div class="card-content">
                 <p class="caption mb-0">{{$account->account_name}} : Post To account
-                    <a href="{{url('/accounts/view-account/'.$account->id)}}" class=" pull-right  btn  waves-effect waves-light cyan darken-1 right" >Back
+                    <a href="{{url()->previous()}}" class=" pull-right  btn  waves-effect waves-light cyan darken-1 right" >Back
                     </a>
                 </p>
             </div>
@@ -26,7 +26,7 @@
         <div id="form-with-validation" class="card card card-default scrollspy col m6">
             <div class="card-content">
                 <h4 class="card-title"> CREDIT:  {{$account->account_name}}</h4>
-                <form action="{{url('accounts/account/post-account-transaction/'.$account->id)}}" method="POST" >
+                <form action="{{url()->current()}}" method="POST" >
                   {{csrf_field()}}
                 
                     <div class="row">
@@ -63,7 +63,7 @@
           <div id="form-with-validation" class="card card card-default scrollspy col m6">
           <div class="card-content">
                 <h4 class="card-title"> DEBIT:  {{$account->account_name}}</h4>
-                <form action="{{url('accounts/account/post-account-transaction/'.$account->id)}}" method="POST" >
+                <form action="{{url()->current()}}" method="POST" >
                   {{csrf_field()}}
                 
                     <div class="row">

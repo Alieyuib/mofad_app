@@ -247,7 +247,6 @@ class User extends Authenticatable
     }
 
     public function accessibleEntities(){
-        //return $this->hasOne('\App\Models\AccessibleEntities','user_id','id');
         return  Models\AccessibleEntities::where('user_id',$this->id)->first();
         
     }

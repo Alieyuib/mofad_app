@@ -24,7 +24,6 @@ class CustomerTransaction extends Model
     public function approval(){
         return $this->hasOne('App\Models\Approval','process_id','id')->where('process_type','CUSTOMER_LODGEMENT');
     }
-    
 
     public function approvedBy($level){
         $approvals = $this->approval;
