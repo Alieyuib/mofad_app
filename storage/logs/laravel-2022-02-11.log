@@ -1,0 +1,521 @@
+[2022-02-11 10:00:21] local.ERROR: Please provide a valid cache path. {"exception":"[object] (InvalidArgumentException(code: 0): Please provide a valid cache path. at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php:36)
+[stacktrace]
+#0 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\ViewServiceProvider.php(92): Illuminate\\View\\Compilers\\Compiler->__construct(Object(Illuminate\\Filesystem\\Filesystem), false)
+#1 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(799): Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}(Object(Illuminate\\Foundation\\Application), Array)
+#2 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(681): Illuminate\\Container\\Container->build(Object(Closure))
+#3 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(785): Illuminate\\Container\\Container->resolve('blade.compiler', Array, true)
+#4 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(629): Illuminate\\Foundation\\Application->resolve('blade.compiler', Array)
+#5 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(770): Illuminate\\Container\\Container->make('blade.compiler', Array)
+#6 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(1244): Illuminate\\Foundation\\Application->make('blade.compiler')
+#7 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\ViewServiceProvider.php(153): Illuminate\\Container\\Container->offsetGet('blade.compiler')
+#8 [internal function]: Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}()
+#9 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\EngineResolver.php(55): call_user_func(Object(Closure))
+#10 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\facade\\ignition\\src\\IgnitionServiceProvider.php(378): Illuminate\\View\\Engines\\EngineResolver->resolve('blade')
+#11 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\facade\\ignition\\src\\IgnitionServiceProvider.php(117): Facade\\Ignition\\IgnitionServiceProvider->hasCustomViewEnginesRegistered()
+#12 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\facade\\ignition\\src\\IgnitionServiceProvider.php(79): Facade\\Ignition\\IgnitionServiceProvider->registerViewEngines()
+#13 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Facade\\Ignition\\IgnitionServiceProvider->boot()
+#14 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#15 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#16 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(856): Illuminate\\Container\\Container->call(Array)
+#19 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(Facade\\Ignition\\IgnitionServiceProvider))
+#20 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(Facade\\Ignition\\IgnitionServiceProvider), 15)
+#21 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(840): array_walk(Array, Object(Closure))
+#22 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#23 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#24 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#25 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#26 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2022-02-11 10:01:56] local.ERROR: Please provide a valid cache path. {"exception":"[object] (InvalidArgumentException(code: 0): Please provide a valid cache path. at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php:36)
+[stacktrace]
+#0 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\ViewServiceProvider.php(92): Illuminate\\View\\Compilers\\Compiler->__construct(Object(Illuminate\\Filesystem\\Filesystem), false)
+#1 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(799): Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}(Object(Illuminate\\Foundation\\Application), Array)
+#2 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(681): Illuminate\\Container\\Container->build(Object(Closure))
+#3 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(785): Illuminate\\Container\\Container->resolve('blade.compiler', Array, true)
+#4 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(629): Illuminate\\Foundation\\Application->resolve('blade.compiler', Array)
+#5 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(770): Illuminate\\Container\\Container->make('blade.compiler', Array)
+#6 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(1244): Illuminate\\Foundation\\Application->make('blade.compiler')
+#7 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\ViewServiceProvider.php(153): Illuminate\\Container\\Container->offsetGet('blade.compiler')
+#8 [internal function]: Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}()
+#9 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\EngineResolver.php(55): call_user_func(Object(Closure))
+#10 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\facade\\ignition\\src\\IgnitionServiceProvider.php(378): Illuminate\\View\\Engines\\EngineResolver->resolve('blade')
+#11 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\facade\\ignition\\src\\IgnitionServiceProvider.php(117): Facade\\Ignition\\IgnitionServiceProvider->hasCustomViewEnginesRegistered()
+#12 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\facade\\ignition\\src\\IgnitionServiceProvider.php(79): Facade\\Ignition\\IgnitionServiceProvider->registerViewEngines()
+#13 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Facade\\Ignition\\IgnitionServiceProvider->boot()
+#14 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#15 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#16 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(856): Illuminate\\Container\\Container->call(Array)
+#19 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(Facade\\Ignition\\IgnitionServiceProvider))
+#20 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(Facade\\Ignition\\IgnitionServiceProvider), 15)
+#21 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(840): array_walk(Array, Object(Closure))
+#22 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#23 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#24 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#25 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#26 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2022-02-11 10:03:49] local.ERROR: Please provide a valid cache path. {"exception":"[object] (InvalidArgumentException(code: 0): Please provide a valid cache path. at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php:36)
+[stacktrace]
+#0 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\ViewServiceProvider.php(92): Illuminate\\View\\Compilers\\Compiler->__construct(Object(Illuminate\\Filesystem\\Filesystem), false)
+#1 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(799): Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}(Object(Illuminate\\Foundation\\Application), Array)
+#2 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(681): Illuminate\\Container\\Container->build(Object(Closure))
+#3 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(785): Illuminate\\Container\\Container->resolve('blade.compiler', Array, true)
+#4 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(629): Illuminate\\Foundation\\Application->resolve('blade.compiler', Array)
+#5 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(770): Illuminate\\Container\\Container->make('blade.compiler', Array)
+#6 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(1244): Illuminate\\Foundation\\Application->make('blade.compiler')
+#7 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\ViewServiceProvider.php(153): Illuminate\\Container\\Container->offsetGet('blade.compiler')
+#8 [internal function]: Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}()
+#9 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\EngineResolver.php(55): call_user_func(Object(Closure))
+#10 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\facade\\ignition\\src\\IgnitionServiceProvider.php(378): Illuminate\\View\\Engines\\EngineResolver->resolve('blade')
+#11 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\facade\\ignition\\src\\IgnitionServiceProvider.php(117): Facade\\Ignition\\IgnitionServiceProvider->hasCustomViewEnginesRegistered()
+#12 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\facade\\ignition\\src\\IgnitionServiceProvider.php(79): Facade\\Ignition\\IgnitionServiceProvider->registerViewEngines()
+#13 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Facade\\Ignition\\IgnitionServiceProvider->boot()
+#14 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#15 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#16 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(856): Illuminate\\Container\\Container->call(Array)
+#19 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(Facade\\Ignition\\IgnitionServiceProvider))
+#20 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(Facade\\Ignition\\IgnitionServiceProvider), 15)
+#21 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(840): array_walk(Array, Object(Closure))
+#22 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#23 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#24 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#25 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#26 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2022-02-11 10:05:08] local.ERROR: Please provide a valid cache path. {"exception":"[object] (InvalidArgumentException(code: 0): Please provide a valid cache path. at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php:36)
+[stacktrace]
+#0 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\ViewServiceProvider.php(92): Illuminate\\View\\Compilers\\Compiler->__construct(Object(Illuminate\\Filesystem\\Filesystem), false)
+#1 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(799): Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}(Object(Illuminate\\Foundation\\Application), Array)
+#2 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(681): Illuminate\\Container\\Container->build(Object(Closure))
+#3 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(785): Illuminate\\Container\\Container->resolve('blade.compiler', Array, true)
+#4 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(629): Illuminate\\Foundation\\Application->resolve('blade.compiler', Array)
+#5 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(770): Illuminate\\Container\\Container->make('blade.compiler', Array)
+#6 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(1244): Illuminate\\Foundation\\Application->make('blade.compiler')
+#7 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\ViewServiceProvider.php(153): Illuminate\\Container\\Container->offsetGet('blade.compiler')
+#8 [internal function]: Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}()
+#9 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\EngineResolver.php(55): call_user_func(Object(Closure))
+#10 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\facade\\ignition\\src\\IgnitionServiceProvider.php(378): Illuminate\\View\\Engines\\EngineResolver->resolve('blade')
+#11 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\facade\\ignition\\src\\IgnitionServiceProvider.php(117): Facade\\Ignition\\IgnitionServiceProvider->hasCustomViewEnginesRegistered()
+#12 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\facade\\ignition\\src\\IgnitionServiceProvider.php(79): Facade\\Ignition\\IgnitionServiceProvider->registerViewEngines()
+#13 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Facade\\Ignition\\IgnitionServiceProvider->boot()
+#14 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#15 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#16 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(856): Illuminate\\Container\\Container->call(Array)
+#19 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(Facade\\Ignition\\IgnitionServiceProvider))
+#20 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(Facade\\Ignition\\IgnitionServiceProvider), 15)
+#21 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(840): array_walk(Array, Object(Closure))
+#22 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#23 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#24 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#25 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#26 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2022-02-11 10:05:18] local.ERROR: Please provide a valid cache path. {"exception":"[object] (InvalidArgumentException(code: 0): Please provide a valid cache path. at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php:36)
+[stacktrace]
+#0 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\ViewServiceProvider.php(92): Illuminate\\View\\Compilers\\Compiler->__construct(Object(Illuminate\\Filesystem\\Filesystem), false)
+#1 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(799): Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}(Object(Illuminate\\Foundation\\Application), Array)
+#2 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(681): Illuminate\\Container\\Container->build(Object(Closure))
+#3 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(785): Illuminate\\Container\\Container->resolve('blade.compiler', Array, true)
+#4 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(629): Illuminate\\Foundation\\Application->resolve('blade.compiler', Array)
+#5 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(770): Illuminate\\Container\\Container->make('blade.compiler', Array)
+#6 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(1244): Illuminate\\Foundation\\Application->make('blade.compiler')
+#7 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\ViewServiceProvider.php(153): Illuminate\\Container\\Container->offsetGet('blade.compiler')
+#8 [internal function]: Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}()
+#9 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\EngineResolver.php(55): call_user_func(Object(Closure))
+#10 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\facade\\ignition\\src\\IgnitionServiceProvider.php(378): Illuminate\\View\\Engines\\EngineResolver->resolve('blade')
+#11 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\facade\\ignition\\src\\IgnitionServiceProvider.php(117): Facade\\Ignition\\IgnitionServiceProvider->hasCustomViewEnginesRegistered()
+#12 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\facade\\ignition\\src\\IgnitionServiceProvider.php(79): Facade\\Ignition\\IgnitionServiceProvider->registerViewEngines()
+#13 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Facade\\Ignition\\IgnitionServiceProvider->boot()
+#14 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#15 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#16 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(856): Illuminate\\Container\\Container->call(Array)
+#19 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(Facade\\Ignition\\IgnitionServiceProvider))
+#20 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(Facade\\Ignition\\IgnitionServiceProvider), 15)
+#21 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(840): array_walk(Array, Object(Closure))
+#22 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#23 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#24 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#25 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#26 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2022-02-11 10:05:32] local.ERROR: Please provide a valid cache path. {"exception":"[object] (InvalidArgumentException(code: 0): Please provide a valid cache path. at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php:36)
+[stacktrace]
+#0 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\ViewServiceProvider.php(92): Illuminate\\View\\Compilers\\Compiler->__construct(Object(Illuminate\\Filesystem\\Filesystem), false)
+#1 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(799): Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}(Object(Illuminate\\Foundation\\Application), Array)
+#2 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(681): Illuminate\\Container\\Container->build(Object(Closure))
+#3 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(785): Illuminate\\Container\\Container->resolve('blade.compiler', Array, true)
+#4 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(629): Illuminate\\Foundation\\Application->resolve('blade.compiler', Array)
+#5 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(770): Illuminate\\Container\\Container->make('blade.compiler', Array)
+#6 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(1244): Illuminate\\Foundation\\Application->make('blade.compiler')
+#7 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\ViewServiceProvider.php(153): Illuminate\\Container\\Container->offsetGet('blade.compiler')
+#8 [internal function]: Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}()
+#9 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\EngineResolver.php(55): call_user_func(Object(Closure))
+#10 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\facade\\ignition\\src\\IgnitionServiceProvider.php(378): Illuminate\\View\\Engines\\EngineResolver->resolve('blade')
+#11 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\facade\\ignition\\src\\IgnitionServiceProvider.php(117): Facade\\Ignition\\IgnitionServiceProvider->hasCustomViewEnginesRegistered()
+#12 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\facade\\ignition\\src\\IgnitionServiceProvider.php(79): Facade\\Ignition\\IgnitionServiceProvider->registerViewEngines()
+#13 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Facade\\Ignition\\IgnitionServiceProvider->boot()
+#14 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#15 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#16 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(856): Illuminate\\Container\\Container->call(Array)
+#19 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(Facade\\Ignition\\IgnitionServiceProvider))
+#20 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(Facade\\Ignition\\IgnitionServiceProvider), 15)
+#21 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(840): array_walk(Array, Object(Closure))
+#22 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#23 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#24 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#25 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#26 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2022-02-11 10:07:57] local.ERROR: Please provide a valid cache path. {"exception":"[object] (InvalidArgumentException(code: 0): Please provide a valid cache path. at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php:36)
+[stacktrace]
+#0 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\ViewServiceProvider.php(92): Illuminate\\View\\Compilers\\Compiler->__construct(Object(Illuminate\\Filesystem\\Filesystem), false)
+#1 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(799): Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}(Object(Illuminate\\Foundation\\Application), Array)
+#2 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(681): Illuminate\\Container\\Container->build(Object(Closure))
+#3 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(785): Illuminate\\Container\\Container->resolve('blade.compiler', Array, true)
+#4 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(629): Illuminate\\Foundation\\Application->resolve('blade.compiler', Array)
+#5 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(770): Illuminate\\Container\\Container->make('blade.compiler', Array)
+#6 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(1244): Illuminate\\Foundation\\Application->make('blade.compiler')
+#7 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\ViewServiceProvider.php(153): Illuminate\\Container\\Container->offsetGet('blade.compiler')
+#8 [internal function]: Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}()
+#9 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\EngineResolver.php(55): call_user_func(Object(Closure))
+#10 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\facade\\ignition\\src\\IgnitionServiceProvider.php(378): Illuminate\\View\\Engines\\EngineResolver->resolve('blade')
+#11 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\facade\\ignition\\src\\IgnitionServiceProvider.php(117): Facade\\Ignition\\IgnitionServiceProvider->hasCustomViewEnginesRegistered()
+#12 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\facade\\ignition\\src\\IgnitionServiceProvider.php(79): Facade\\Ignition\\IgnitionServiceProvider->registerViewEngines()
+#13 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Facade\\Ignition\\IgnitionServiceProvider->boot()
+#14 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#15 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#16 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(856): Illuminate\\Container\\Container->call(Array)
+#19 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(Facade\\Ignition\\IgnitionServiceProvider))
+#20 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(Facade\\Ignition\\IgnitionServiceProvider), 15)
+#21 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(840): array_walk(Array, Object(Closure))
+#22 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#23 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#24 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#25 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#26 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2022-02-11 10:08:02] local.ERROR: Please provide a valid cache path. {"exception":"[object] (InvalidArgumentException(code: 0): Please provide a valid cache path. at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php:36)
+[stacktrace]
+#0 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\ViewServiceProvider.php(92): Illuminate\\View\\Compilers\\Compiler->__construct(Object(Illuminate\\Filesystem\\Filesystem), false)
+#1 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(799): Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}(Object(Illuminate\\Foundation\\Application), Array)
+#2 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(681): Illuminate\\Container\\Container->build(Object(Closure))
+#3 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(785): Illuminate\\Container\\Container->resolve('blade.compiler', Array, true)
+#4 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(629): Illuminate\\Foundation\\Application->resolve('blade.compiler', Array)
+#5 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(770): Illuminate\\Container\\Container->make('blade.compiler', Array)
+#6 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(1244): Illuminate\\Foundation\\Application->make('blade.compiler')
+#7 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\ViewServiceProvider.php(153): Illuminate\\Container\\Container->offsetGet('blade.compiler')
+#8 [internal function]: Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}()
+#9 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\EngineResolver.php(55): call_user_func(Object(Closure))
+#10 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\facade\\ignition\\src\\IgnitionServiceProvider.php(378): Illuminate\\View\\Engines\\EngineResolver->resolve('blade')
+#11 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\facade\\ignition\\src\\IgnitionServiceProvider.php(117): Facade\\Ignition\\IgnitionServiceProvider->hasCustomViewEnginesRegistered()
+#12 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\facade\\ignition\\src\\IgnitionServiceProvider.php(79): Facade\\Ignition\\IgnitionServiceProvider->registerViewEngines()
+#13 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Facade\\Ignition\\IgnitionServiceProvider->boot()
+#14 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#15 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#16 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(856): Illuminate\\Container\\Container->call(Array)
+#19 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(Facade\\Ignition\\IgnitionServiceProvider))
+#20 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(Facade\\Ignition\\IgnitionServiceProvider), 15)
+#21 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(840): array_walk(Array, Object(Closure))
+#22 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#23 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#24 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#25 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#26 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2022-02-11 10:08:12] local.ERROR: Please provide a valid cache path. {"exception":"[object] (InvalidArgumentException(code: 0): Please provide a valid cache path. at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php:36)
+[stacktrace]
+#0 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\ViewServiceProvider.php(92): Illuminate\\View\\Compilers\\Compiler->__construct(Object(Illuminate\\Filesystem\\Filesystem), false)
+#1 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(799): Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}(Object(Illuminate\\Foundation\\Application), Array)
+#2 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(681): Illuminate\\Container\\Container->build(Object(Closure))
+#3 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(785): Illuminate\\Container\\Container->resolve('blade.compiler', Array, true)
+#4 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(629): Illuminate\\Foundation\\Application->resolve('blade.compiler', Array)
+#5 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(770): Illuminate\\Container\\Container->make('blade.compiler', Array)
+#6 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(1244): Illuminate\\Foundation\\Application->make('blade.compiler')
+#7 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\ViewServiceProvider.php(153): Illuminate\\Container\\Container->offsetGet('blade.compiler')
+#8 [internal function]: Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}()
+#9 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\EngineResolver.php(55): call_user_func(Object(Closure))
+#10 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\facade\\ignition\\src\\IgnitionServiceProvider.php(378): Illuminate\\View\\Engines\\EngineResolver->resolve('blade')
+#11 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\facade\\ignition\\src\\IgnitionServiceProvider.php(117): Facade\\Ignition\\IgnitionServiceProvider->hasCustomViewEnginesRegistered()
+#12 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\facade\\ignition\\src\\IgnitionServiceProvider.php(79): Facade\\Ignition\\IgnitionServiceProvider->registerViewEngines()
+#13 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Facade\\Ignition\\IgnitionServiceProvider->boot()
+#14 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#15 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#16 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(856): Illuminate\\Container\\Container->call(Array)
+#19 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(Facade\\Ignition\\IgnitionServiceProvider))
+#20 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(Facade\\Ignition\\IgnitionServiceProvider), 15)
+#21 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(840): array_walk(Array, Object(Closure))
+#22 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#23 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#24 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#25 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#26 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2022-02-11 10:08:27] local.ERROR: Please provide a valid cache path. {"exception":"[object] (InvalidArgumentException(code: 0): Please provide a valid cache path. at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php:36)
+[stacktrace]
+#0 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\ViewServiceProvider.php(92): Illuminate\\View\\Compilers\\Compiler->__construct(Object(Illuminate\\Filesystem\\Filesystem), false)
+#1 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(799): Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}(Object(Illuminate\\Foundation\\Application), Array)
+#2 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(681): Illuminate\\Container\\Container->build(Object(Closure))
+#3 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(785): Illuminate\\Container\\Container->resolve('blade.compiler', Array, true)
+#4 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(629): Illuminate\\Foundation\\Application->resolve('blade.compiler', Array)
+#5 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(770): Illuminate\\Container\\Container->make('blade.compiler', Array)
+#6 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(1244): Illuminate\\Foundation\\Application->make('blade.compiler')
+#7 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\ViewServiceProvider.php(153): Illuminate\\Container\\Container->offsetGet('blade.compiler')
+#8 [internal function]: Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}()
+#9 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\EngineResolver.php(55): call_user_func(Object(Closure))
+#10 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\facade\\ignition\\src\\IgnitionServiceProvider.php(378): Illuminate\\View\\Engines\\EngineResolver->resolve('blade')
+#11 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\facade\\ignition\\src\\IgnitionServiceProvider.php(117): Facade\\Ignition\\IgnitionServiceProvider->hasCustomViewEnginesRegistered()
+#12 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\facade\\ignition\\src\\IgnitionServiceProvider.php(79): Facade\\Ignition\\IgnitionServiceProvider->registerViewEngines()
+#13 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Facade\\Ignition\\IgnitionServiceProvider->boot()
+#14 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#15 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#16 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(856): Illuminate\\Container\\Container->call(Array)
+#19 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(Facade\\Ignition\\IgnitionServiceProvider))
+#20 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(Facade\\Ignition\\IgnitionServiceProvider), 15)
+#21 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(840): array_walk(Array, Object(Closure))
+#22 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#23 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#24 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#25 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#26 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2022-02-11 10:08:48] local.ERROR: Please provide a valid cache path. {"exception":"[object] (InvalidArgumentException(code: 0): Please provide a valid cache path. at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php:36)
+[stacktrace]
+#0 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\ViewServiceProvider.php(92): Illuminate\\View\\Compilers\\Compiler->__construct(Object(Illuminate\\Filesystem\\Filesystem), false)
+#1 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(799): Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}(Object(Illuminate\\Foundation\\Application), Array)
+#2 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(681): Illuminate\\Container\\Container->build(Object(Closure))
+#3 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(785): Illuminate\\Container\\Container->resolve('blade.compiler', Array, true)
+#4 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(629): Illuminate\\Foundation\\Application->resolve('blade.compiler', Array)
+#5 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(770): Illuminate\\Container\\Container->make('blade.compiler', Array)
+#6 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(1244): Illuminate\\Foundation\\Application->make('blade.compiler')
+#7 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\ViewServiceProvider.php(153): Illuminate\\Container\\Container->offsetGet('blade.compiler')
+#8 [internal function]: Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}()
+#9 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\EngineResolver.php(55): call_user_func(Object(Closure))
+#10 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\facade\\ignition\\src\\IgnitionServiceProvider.php(378): Illuminate\\View\\Engines\\EngineResolver->resolve('blade')
+#11 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\facade\\ignition\\src\\IgnitionServiceProvider.php(117): Facade\\Ignition\\IgnitionServiceProvider->hasCustomViewEnginesRegistered()
+#12 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\facade\\ignition\\src\\IgnitionServiceProvider.php(79): Facade\\Ignition\\IgnitionServiceProvider->registerViewEngines()
+#13 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Facade\\Ignition\\IgnitionServiceProvider->boot()
+#14 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#15 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#16 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(856): Illuminate\\Container\\Container->call(Array)
+#19 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(Facade\\Ignition\\IgnitionServiceProvider))
+#20 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(Facade\\Ignition\\IgnitionServiceProvider), 15)
+#21 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(840): array_walk(Array, Object(Closure))
+#22 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#23 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#24 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#25 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#26 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2022-02-11 10:11:46] local.ERROR: require(C:\Users\RC-PC 03\Desktop\mofad_v2\routes/api.php): failed to open stream: No such file or directory {"exception":"[object] (ErrorException(code: 0): require(C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\outes/api.php): failed to open stream: No such file or directory at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteFileRegistrar.php:35)
+[stacktrace]
+#0 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteFileRegistrar.php(35): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'require(C:\\\\User...', 'C:\\\\Users\\\\RC-PC ...', 35, Array)
+#1 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteFileRegistrar.php(35): require()
+#2 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(416): Illuminate\\Routing\\RouteFileRegistrar->register('C:\\\\Users\\\\RC-PC ...')
+#3 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(374): Illuminate\\Routing\\Router->loadRoutes('C:\\\\Users\\\\RC-PC ...')
+#4 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteRegistrar.php(122): Illuminate\\Routing\\Router->group(Array, 'C:\\\\Users\\\\RC-PC ...')
+#5 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\Providers\\RouteServiceProvider.php(71): Illuminate\\Routing\\RouteRegistrar->group('C:\\\\Users\\\\RC-PC ...')
+#6 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\Providers\\RouteServiceProvider.php(38): App\\Providers\\RouteServiceProvider->mapApiRoutes()
+#7 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): App\\Providers\\RouteServiceProvider->map()
+#8 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#9 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#10 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#11 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#12 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider.php(87): Illuminate\\Container\\Container->call(Array)
+#13 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider.php(36): Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider->loadRoutes()
+#14 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\Providers\\RouteServiceProvider.php(28): Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider->boot()
+#15 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): App\\Providers\\RouteServiceProvider->boot()
+#16 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#17 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#18 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#19 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#20 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(856): Illuminate\\Container\\Container->call(Array)
+#21 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\RouteServiceProvider))
+#22 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\RouteServiceProvider), 24)
+#23 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(840): array_walk(Array, Object(Closure))
+#24 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#25 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#26 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#27 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#28 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 {main}
+"} 
+[2022-02-11 10:13:23] local.ERROR: require(C:\Users\RC-PC 03\Desktop\mofad_v2\routes/api.php): failed to open stream: No such file or directory {"exception":"[object] (ErrorException(code: 0): require(C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\outes/api.php): failed to open stream: No such file or directory at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteFileRegistrar.php:35)
+[stacktrace]
+#0 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteFileRegistrar.php(35): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'require(C:\\\\User...', 'C:\\\\Users\\\\RC-PC ...', 35, Array)
+#1 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteFileRegistrar.php(35): require()
+#2 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(416): Illuminate\\Routing\\RouteFileRegistrar->register('C:\\\\Users\\\\RC-PC ...')
+#3 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(374): Illuminate\\Routing\\Router->loadRoutes('C:\\\\Users\\\\RC-PC ...')
+#4 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteRegistrar.php(122): Illuminate\\Routing\\Router->group(Array, 'C:\\\\Users\\\\RC-PC ...')
+#5 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\Providers\\RouteServiceProvider.php(71): Illuminate\\Routing\\RouteRegistrar->group('C:\\\\Users\\\\RC-PC ...')
+#6 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\Providers\\RouteServiceProvider.php(38): App\\Providers\\RouteServiceProvider->mapApiRoutes()
+#7 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): App\\Providers\\RouteServiceProvider->map()
+#8 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#9 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#10 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#11 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#12 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider.php(87): Illuminate\\Container\\Container->call(Array)
+#13 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider.php(36): Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider->loadRoutes()
+#14 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\Providers\\RouteServiceProvider.php(28): Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider->boot()
+#15 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): App\\Providers\\RouteServiceProvider->boot()
+#16 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(37): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#17 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#18 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#19 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#20 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(856): Illuminate\\Container\\Container->call(Array)
+#21 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(839): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\RouteServiceProvider))
+#22 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\RouteServiceProvider), 24)
+#23 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(840): array_walk(Array, Object(Closure))
+#24 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#25 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(219): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#26 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(320): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#27 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#28 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 {main}
+"} 
+[2022-02-11 10:18:31] local.ERROR: Cannot declare class CreateUsersTable, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class CreateUsersTable, because the name is already in use at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\database\\migrations\\2014_10_12_000000_create_users_table copy.php:7)
+[stacktrace]
+#0 {main}
+"} 
+[2022-02-11 10:18:45] local.ERROR: Cannot declare class CreateUsersTable, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class CreateUsersTable, because the name is already in use at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\database\\migrations\\2014_10_12_000000_create_users_table copy.php:7)
+[stacktrace]
+#0 {main}
+"} 
+[2022-02-11 10:18:52] local.ERROR: Cannot declare class CreateUsersTable, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class CreateUsersTable, because the name is already in use at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\database\\migrations\\2014_10_12_000000_create_users_table copy.php:7)
+[stacktrace]
+#0 {main}
+"} 
+[2022-02-11 10:20:45] local.ERROR: There are no commands defined in the "generate" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"generate\" namespace. at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\symfony\\console\\Application.php:604)
+[stacktrace]
+#0 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\symfony\\console\\Application.php(657): Symfony\\Component\\Console\\Application->findNamespace('generate')
+#1 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\symfony\\console\\Application.php(237): Symfony\\Component\\Console\\Application->find('generate:key')
+#2 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\symfony\\console\\Application.php(149): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 {main}
+"} 
+[2022-02-11 10:24:15] local.ERROR: Cannot declare class App\PostStatusHelper, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class App\\PostStatusHelper, because the name is already in use at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\helpers.php:5)
+[stacktrace]
+#0 {main}
+"} 
+[2022-02-11 10:24:16] local.ERROR: Cannot declare class App\Models\Lubebay, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class App\\Models\\Lubebay, because the name is already in use at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\Models\\Lubebay.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2022-02-11 10:25:15] local.ERROR: Cannot declare class App\PostStatusHelper, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class App\\PostStatusHelper, because the name is already in use at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\helpers.php:5)
+[stacktrace]
+#0 {main}
+"} 
+[2022-02-11 10:26:15] local.ERROR: Cannot declare class App\PostStatusHelper, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class App\\PostStatusHelper, because the name is already in use at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\helpers.php:5)
+[stacktrace]
+#0 {main}
+"} 
+[2022-02-11 10:27:15] local.ERROR: Cannot declare class App\PostStatusHelper, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class App\\PostStatusHelper, because the name is already in use at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\helpers.php:5)
+[stacktrace]
+#0 {main}
+"} 
+[2022-02-11 10:27:21] local.ERROR: Cannot declare class App\PostStatusHelper, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class App\\PostStatusHelper, because the name is already in use at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\helpers.php:5)
+[stacktrace]
+#0 {main}
+"} 
+[2022-02-11 10:27:22] local.ERROR: Cannot declare class App\Models\Lubebay, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class App\\Models\\Lubebay, because the name is already in use at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\Models\\Lubebay.php:8)
+[stacktrace]
+#0 {main}
+"} 
+[2022-02-11 10:28:21] local.ERROR: Cannot declare class App\PostStatusHelper, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class App\\PostStatusHelper, because the name is already in use at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\helpers.php:5)
+[stacktrace]
+#0 {main}
+"} 
+[2022-02-11 10:29:21] local.ERROR: Cannot declare class App\PostStatusHelper, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class App\\PostStatusHelper, because the name is already in use at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\helpers.php:5)
+[stacktrace]
+#0 {main}
+"} 
+[2022-02-11 10:30:21] local.ERROR: Cannot declare class App\PostStatusHelper, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class App\\PostStatusHelper, because the name is already in use at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\helpers.php:5)
+[stacktrace]
+#0 {main}
+"} 
+[2022-02-11 10:31:21] local.ERROR: Cannot declare class App\PostStatusHelper, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class App\\PostStatusHelper, because the name is already in use at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\helpers.php:5)
+[stacktrace]
+#0 {main}
+"} 
+[2022-02-11 10:32:21] local.ERROR: Cannot declare class App\PostStatusHelper, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class App\\PostStatusHelper, because the name is already in use at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\helpers.php:5)
+[stacktrace]
+#0 {main}
+"} 
+[2022-02-11 10:33:21] local.ERROR: Cannot declare class App\PostStatusHelper, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class App\\PostStatusHelper, because the name is already in use at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\helpers.php:5)
+[stacktrace]
+#0 {main}
+"} 
+[2022-02-11 10:34:21] local.ERROR: Cannot declare class App\PostStatusHelper, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class App\\PostStatusHelper, because the name is already in use at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\helpers.php:5)
+[stacktrace]
+#0 {main}
+"} 
+[2022-02-11 10:35:21] local.ERROR: Cannot declare class App\PostStatusHelper, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class App\\PostStatusHelper, because the name is already in use at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\helpers.php:5)
+[stacktrace]
+#0 {main}
+"} 
+[2022-02-11 10:36:21] local.ERROR: Cannot declare class App\PostStatusHelper, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class App\\PostStatusHelper, because the name is already in use at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\helpers.php:5)
+[stacktrace]
+#0 {main}
+"} 
+[2022-02-11 10:37:21] local.ERROR: Cannot declare class App\PostStatusHelper, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class App\\PostStatusHelper, because the name is already in use at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\helpers.php:5)
+[stacktrace]
+#0 {main}
+"} 
+[2022-02-11 10:38:21] local.ERROR: Cannot declare class App\PostStatusHelper, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class App\\PostStatusHelper, because the name is already in use at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\helpers.php:5)
+[stacktrace]
+#0 {main}
+"} 
+[2022-02-11 10:39:21] local.ERROR: Cannot declare class App\PostStatusHelper, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class App\\PostStatusHelper, because the name is already in use at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\helpers.php:5)
+[stacktrace]
+#0 {main}
+"} 
+[2022-02-11 10:40:21] local.ERROR: Cannot declare class App\PostStatusHelper, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class App\\PostStatusHelper, because the name is already in use at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\helpers.php:5)
+[stacktrace]
+#0 {main}
+"} 
+[2022-02-11 10:41:21] local.ERROR: Cannot declare class App\PostStatusHelper, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class App\\PostStatusHelper, because the name is already in use at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\helpers.php:5)
+[stacktrace]
+#0 {main}
+"} 
+[2022-02-11 10:42:21] local.ERROR: Cannot declare class App\PostStatusHelper, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class App\\PostStatusHelper, because the name is already in use at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\helpers.php:5)
+[stacktrace]
+#0 {main}
+"} 
+[2022-02-11 10:43:21] local.ERROR: Cannot declare class App\PostStatusHelper, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class App\\PostStatusHelper, because the name is already in use at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\helpers.php:5)
+[stacktrace]
+#0 {main}
+"} 
