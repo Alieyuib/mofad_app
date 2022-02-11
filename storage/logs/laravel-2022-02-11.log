@@ -519,3 +519,15 @@
 [stacktrace]
 #0 {main}
 "} 
+[2022-02-11 10:44:21] local.ERROR: Cannot declare class App\PostStatusHelper, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class App\\PostStatusHelper, because the name is already in use at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\helpers.php:5)
+[stacktrace]
+#0 {main}
+"} 
+[2022-02-11 10:45:21] local.ERROR: Cannot declare class App\PostStatusHelper, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class App\\PostStatusHelper, because the name is already in use at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\helpers.php:5)
+[stacktrace]
+#0 {main}
+"} 
+[2022-02-11 10:46:21] local.ERROR: Cannot declare class App\PostStatusHelper, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class App\\PostStatusHelper, because the name is already in use at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\helpers.php:5)
+[stacktrace]
+#0 {main}
+"} 
