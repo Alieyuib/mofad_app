@@ -132,9 +132,6 @@
                             </div>
                         </div>
 
-                        
-                         
-                    
                 </div>
                 <div class="content-overlay"></div>
             </div>

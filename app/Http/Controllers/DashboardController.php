@@ -727,6 +727,8 @@ class DashboardController extends Controller
         // $view_data['lubebays_expense_grand_total']  = $expense_grand_total;
         // $view_data['lubebays_grand_total']  = $grand_total;
         // $view_data['compiled_lubebays']  = $compiled_lubebays;
+
+        // dd($view_data);
        
         return view('dashboard_direct_sales',$view_data);
     }

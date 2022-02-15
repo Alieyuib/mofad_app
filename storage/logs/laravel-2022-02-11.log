@@ -2987,3 +2987,39 @@
 [stacktrace]
 #0 {main}
 "} 
+[2022-02-11 17:51:44] local.ERROR: Cannot declare class App\Http\Controllers\Controller, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class App\\Http\\Controllers\\Controller, because the name is already in use at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\Controller.php:10)
+[stacktrace]
+#0 {main}
+"} 
+[2022-02-11 17:52:44] local.ERROR: Cannot declare class App\Http\Controllers\Controller, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class App\\Http\\Controllers\\Controller, because the name is already in use at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\Controller.php:10)
+[stacktrace]
+#0 {main}
+"} 
+[2022-02-11 17:53:44] local.ERROR: Cannot declare class App\Http\Controllers\Controller, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class App\\Http\\Controllers\\Controller, because the name is already in use at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\Controller.php:10)
+[stacktrace]
+#0 {main}
+"} 
+[2022-02-11 17:54:44] local.ERROR: Cannot declare class App\Http\Controllers\Controller, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class App\\Http\\Controllers\\Controller, because the name is already in use at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\Controller.php:10)
+[stacktrace]
+#0 {main}
+"} 
+[2022-02-11 17:55:44] local.ERROR: Cannot declare class App\Http\Controllers\Controller, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class App\\Http\\Controllers\\Controller, because the name is already in use at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\Controller.php:10)
+[stacktrace]
+#0 {main}
+"} 
+[2022-02-11 19:42:58] local.ERROR: Cannot declare class App\Http\Controllers\Controller, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class App\\Http\\Controllers\\Controller, because the name is already in use at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\Controller.php:10)
+[stacktrace]
+#0 {main}
+"} 
+[2022-02-11 19:43:58] local.ERROR: Cannot declare class App\Http\Controllers\Controller, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class App\\Http\\Controllers\\Controller, because the name is already in use at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\Controller.php:10)
+[stacktrace]
+#0 {main}
+"} 
+[2022-02-11 19:45:00] local.ERROR: Cannot declare class App\Http\Controllers\Controller, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class App\\Http\\Controllers\\Controller, because the name is already in use at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\Controller.php:10)
+[stacktrace]
+#0 {main}
+"} 
+[2022-02-11 19:45:59] local.ERROR: Cannot declare class App\Http\Controllers\Controller, because the name is already in use {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Cannot declare class App\\Http\\Controllers\\Controller, because the name is already in use at C:\\Users\\RC-PC 03\\Desktop\\mofad_v2\\app\\Controller.php:10)
+[stacktrace]
+#0 {main}
+"} 
