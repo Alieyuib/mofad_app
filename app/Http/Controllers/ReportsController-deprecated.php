@@ -24,7 +24,6 @@ use Carbon\CarbonPeriod;
 
 
 use App\Exports\ReportExport;
-use Yajra\Datatables\Datatables;
 
 use Illuminate\Support\Facades\Auth;
 use  Maatwebsite\Excel\Facades\Excel;
@@ -199,49 +198,9 @@ class ReportsController extends Controller
 
     public function customerReports(Request $request)
     {
-        /* 
-        TODO:
-        - View list of customers
-        - View customer report details
-        - View list of all customer activities i.e orders and deposits
-        - View list of customer orders
-        - View list of customer deposits
-        - Filter customers by orders and deposits
-        - Generate report for list of customers in excel format
-        - Generate report for a customer in excel format
-        */
-
-        $customer_id = 2; //$request->input('customer_id');
-        // $customer = Customer::find(2);
-        // dd($customer->totalPurchases());
+        $customer = $request->input('customer_id');
 
 
-        $customers = Customer::all();
-
-        return view('reports.customers.reports', ['customers'=>$customers]);
-
-    }
-
-    public function customerDataTable()
-    {
-        $customers = Customer::select(['id','name','address','balance']);
-
-        return Datatables::of($customers)->make();
-    }
-
-    public function getCustomers(Request $request)
-    {
-        if ($request->ajax()) {
-            $data = Customer::latest()->pluck('name', 'address', 'balance')->get();
-            return Datatables::of($data)
-                ->addIndexColumn()
-                ->addColumn('action', function($row){
-                    $actionBtn = '<a href="javascript:void(0)" class="edit btn btn-success btn-sm">Edit</a> <a href="javascript:void(0)" class="delete btn btn-danger btn-sm">Delete</a>';
-                    return $actionBtn;
-                })
-                ->rawColumns(['action'])
-                ->make(true);
-        }
     }
 
 
@@ -254,7 +213,7 @@ class ReportsController extends Controller
         ])->get();
         $view_data['states'] =  State::all();
         foreach ($view_data['customers'] as $key => $customer) {
-            // dd($customer->name);
+            dd($customer->name);
         }
         
         if ($request->isMethod("get") ) {

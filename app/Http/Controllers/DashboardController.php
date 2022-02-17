@@ -203,7 +203,7 @@ class DashboardController extends Controller
         // $view_data['lubebays_expense_grand_total']  = $expense_grand_total;
         // $view_data['lubebays_grand_total']  = $grand_total;
         // $view_data['compiled_lubebays']  = $compiled_lubebays;
-       
+    
         return view('dashboard',$view_data);
     }
 
@@ -562,9 +562,10 @@ class DashboardController extends Controller
         $number_of_days_in_interval = $dateinterval->count();
         $highest_graph_value =  0;
         $graph_label_array = [];
+        $graph_data = [];
+        array_push($graph_data,  ['Location', 'Sales']);
 
         foreach ($dateinterval as $date) {
-           
             $start_of_day = Carbon::createFromTimestamp($date->timestamp)->startOfDay() ;
             $end_of_day = Carbon::createFromTimestamp($date->timestamp)->endOfDay();
             $total_mofad_direct_sales = $this->totalMofadDirectSales($start_of_day, $end_of_day );
@@ -575,6 +576,8 @@ class DashboardController extends Controller
                 $highest_graph_value = $total_mofad_direct_sales;
             }
 
+            $label_values = [$start_of_day->format('d'), $total_mofad_direct_sales];
+            array_push($graph_data, $label_values);
 
         }
 
@@ -618,6 +621,7 @@ class DashboardController extends Controller
         $view_data['number_of_days_in_interval']  = $number_of_days_in_interval;
         $view_data['highest_graph_value']  = $highest_graph_value;
         $view_data['graph_label_array']  = json_encode($graph_label_array);
+        $view_data['graph_data']  = json_encode($graph_data);
         $view_data['mofad_total_direct_sales'] = $grand_total_price;
         $view_data['mofad_total_direct_sales_lodgement'] = $grand_total_lodged;
 
