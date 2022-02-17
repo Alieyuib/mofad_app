@@ -56,66 +56,14 @@
                 </div>
             </div>
 
-            <div class="card">
-                <div class="card-content">
-                    <h4 class="card-title">Customers
-                    </h4>
-                    <div class="row">
-                        <div class="col s12">
-                            <table id="scroll-dynamic" class="display scroll-dynamic">
-                                <thead>
-                                    <tr>
-                                        <th>Name </th>
-                                        <th>Address</th>
-                                        <th>Balance</th>
-                                        <th>Deposits</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
+            <div class="card ">
+                <div class="card-content ">
 
-                                    @forelse ($customers as $customer)
-                                        <tr>
-                                            <td>{{ $customer['name'] }}</td>
-                                            <td>{{ $customer['address'] }}</td>
-                                            @if ($customer['balance'] < 0)
-                                                <td style="color:red">
-                                                    ₦{{ $customer['balance'] ? $customer['balance'] : 0 }}</td>
-                                            @else
-                                                <td style="color:green">
-                                                    ₦{{ $customer['balance'] ? $customer['balance'] : 0 }}</td>
-                                            @endif
-                                            <td> ₦{{ $customer->totalPurchases() }} </td>
-                                            <td>
-                                                <button class="edit-modal btn btn-info"
-                                                    data-info="{{ $customer->name }},{{ $customer->address }},{{ $customer->balance }}">
-                                                    <span class="glyphicon glyphicon-edit"></span> Edit
-                                                </button>
-                                                <button class="delete-modal btn btn-danger"
-                                                    data-info="{{ $customer->name }},{{ $customer->address }},{{ $customer->balance }},{{ $customer->email }},{{ $customer->gender }},{{ $customer->country }},{{ $customer->salary }}">
-                                                    <span class="glyphicon glyphicon-trash"></span> Delete
-                                                </button>
-                                            </td>
-                                        </tr>
-                                    @empty
-                                        No customers available
-                                    @endforelse
-
-                                </tbody>
-
-                                {{-- <tfoot>
-                                    <tr>
-                                        <th>Total </th>
-                                        <th>{{ number_format($grand_total_quantity) }}</th>
-                                        <th> ₦{{ number_format($grand_total_price) }}</th>
-                                    </tr>
-                                </tfoot> --}}
-                            </table>
-                            {{-- {{ $customers->links('vendor.pagination.custom') }} --}}
-                        </div>
-                    </div>
+                    {!! $dataTable->table() !!}
                 </div>
             </div>
+
+
         </div>
         <div>
         </div>
@@ -127,9 +75,16 @@
 
     @section('footer_scripts')
         @parent()
-        <script type="text/javascript">
+        {{-- <script type="text/javascript">
             $(document).ready(function() {
-                $('#scroll-dynamic').DataTable();
+                $('#scroll-dynamic').DataTable({
+                    dom:'Bfrtip',
+                    buttons:
+                });
             });
-        </script>
+        </script> --}}
+        <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.0.3/css/buttons.dataTables.min.css">
+        <script src="https://cdn.datatables.net/buttons/1.0.3/js/dataTables.buttons.min.js"></script>
+        <script src="/vendor/datatables/buttons.server-side.js"></script>
+        {!! $dataTable->scripts() !!}
     @endsection

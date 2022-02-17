@@ -24,10 +24,11 @@ use Carbon\CarbonPeriod;
 
 
 use App\Exports\ReportExport;
-use Yajra\Datatables\Datatables;
+use Datatables;
 
 use Illuminate\Support\Facades\Auth;
 use  Maatwebsite\Excel\Facades\Excel;
+use App\DataTables\CustomersDataTable;
 
 class ReportsController extends Controller
 {
@@ -197,7 +198,7 @@ class ReportsController extends Controller
     }
 
 
-    public function customerReports(Request $request)
+    public function customerReports(CustomersDataTable $dataTable)
     {
         /* 
         TODO:
@@ -211,15 +212,15 @@ class ReportsController extends Controller
         - Generate report for a customer in excel format
         */
 
-        $customer_id = 2; //$request->input('customer_id');
+        // $customer_id = 2; //$request->input('customer_id');
         // $customer = Customer::find(2);
         // dd($customer->totalPurchases());
 
-
-        $customers = Customer::all();
-
-        return view('reports.customers.reports', ['customers'=>$customers]);
-
+        // $customers = Customer::all();
+        
+        // return view('reports.customers.reports', ['customers'=>$customers]);
+        
+        return $dataTable->render('reports.customers.reports');
     }
 
     public function customerDataTable()
