@@ -12,18 +12,13 @@ class Customer extends Model
 {
     use SoftDeletes;
     protected $table = 'customers';
-    //
     public function substore(){
         //return Substore::where('customer_id',$this->id)->first();
         return $this->hasOne('App\Models\Substore','customer_id','id');
-        
-
     }
 
     public function productScheme($product_id){
-
         return PriceScheme::where('customer_type',$this->customer_type)->where('product_id',$product_id)->get()->first();
-        
     }
 
     public function customerType (){
@@ -34,17 +29,20 @@ class Customer extends Model
         return $this->hasMany('App\Models\Prf','client_id', 'id');
     }
 
-    public function totalPruchases(){
+    public function totalPurchases(){
         $total_purchases = 0;
+        foreach( $this->payments->where('transaction_type', 'CREDIT') as $payment){
+            $total_purchases += $payment->amount;
+        }
+        return $total_purchases;
         //todo
-        
     }
     public function totalOutstanding(){
         $total_Outstanding = 0;
         //todo
     }
 
-    //renamed transaction and graduallly migrate useage of payemnt to transaction swhere appropriate
+    //renamed transaction and graduallly migrate useage of payemnt to transactions where appropriate
     public function payments(){
         return  $this->hasMany('App\Models\CustomerTransaction', 'customer_id' , 'id');
     }
@@ -101,11 +99,8 @@ class Customer extends Model
             else{
                 $last_interval_balance = $this->balance;
             }
-        }
-
-        
+        }    
         return $last_interval_balance;
-
     }
 
     public function approvedPayments(){
@@ -118,6 +113,11 @@ class Customer extends Model
 
     public function state(){
         return State::where('id', $this->state)->first();
+    }
+
+    public function customerOrder()
+    {
+        return $this->hasMany('App\Models\CustomerOrder','client_id','id');
     }
     
 }
