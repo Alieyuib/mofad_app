@@ -22,19 +22,11 @@ class CustomersDataTable extends DataTable
         return datatables()
             ->eloquent($query)
             ->editColumn('deposits', function ($model) {
-                return $model->totalPurchases();
+                return number_format($model->totalPurchases());
+            })
+            ->editColumn('balance', function ($model) {
+                return number_format($model->balance);
             });
-            // ->setRowAttr([
-            //     'style' => function($model){
-            //         return $model->balance < 0  ? 'color:red;' : 'color:green;';
-            //     }
-            // ]);
-            // ->editColumn('balance', function ($model) {
-            //     $negative = '<td class:"negative">'.$model->balance.'</td>';
-            //     $positive = '<td class:"positive">'.$model->balance.'</td>';
-            //     return $model->balance < 0 ? $negative : $positive;
-            // })
-            // ->rawColumns(['balance']);
     }
 
     /**
@@ -61,11 +53,9 @@ class CustomersDataTable extends DataTable
                         'searching' => true,
                         'info' => false,
                         'searchDelay' => 350,
-                        'language' => [
-                            'url' => url('js/dataTables/language.json')
-                        ],
-                        'createdRow' => "function(row, data, index) { 
-                            if ( data['balance'] < 0 ) {
+                        'createdRow' => "function(row, data, index) {                             
+                            var amount= parseFloat( data['balance'].replace(/,/g, '') ); // replace , thousands separator
+                            if ( amount < 0 ) {
                                 $('td', row).eq(2).addClass('negative');
                             } else {
                                 $('td', row).eq(2).addClass('positive');
@@ -98,9 +88,8 @@ class CustomersDataTable extends DataTable
             //       ->addClass('text-center'),
             Column::make('name'),
             Column::make('address'),
-            Column::make('balance'),
-            Column::computed('deposits'),
-            // Column::make('deposits'),
+            Column::make('balance')->title('Balance(₦)'),
+            Column::computed('deposits')->title('Deposits(₦)'),
         ];
     }
 

@@ -48,27 +48,5 @@
         <script src="https://cdn.datatables.net/buttons/1.0.3/js/dataTables.buttons.min.js"></script>
         <script src="/vendor/datatables/buttons.server-side.js"></script>
         {!! $dataTable->scripts() !!}
-        <script>
-            serverSide: true,
-                ajax: {
-                    url: ...,
-                    type: "get"
-                },
-                columns: [
-                    ...{
-                        data: 'balance',
-                        name: 'balance'
-                    },
-                    ...
-                ],
-                createdRow: function(row, data, index) {
-                    ...
-                    if (data['balance'] < 0) {
-                        $('td', row).eq(2).addClass('negative');
-                    } else {
-                        $('td', row).eq(2).addClass('positive');
-                    }
-                    ...
-                },
-        </script>
+
     @endsection
