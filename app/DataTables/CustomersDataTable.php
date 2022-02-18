@@ -20,8 +20,21 @@ class CustomersDataTable extends DataTable
     public function dataTable($query)
     {
         return datatables()
-            ->eloquent($query);
-            // ->addColumn('action', 'customers.action');
+            ->eloquent($query)
+            ->editColumn('deposits', function ($model) {
+                return $model->totalPurchases();
+            });
+            // ->setRowAttr([
+            //     'style' => function($model){
+            //         return $model->balance < 0  ? 'color:red;' : 'color:green;';
+            //     }
+            // ]);
+            // ->editColumn('balance', function ($model) {
+            //     $negative = '<td class:"negative">'.$model->balance.'</td>';
+            //     $positive = '<td class:"positive">'.$model->balance.'</td>';
+            //     return $model->balance < 0 ? $negative : $positive;
+            // })
+            // ->rawColumns(['balance']);
     }
 
     /**
@@ -43,6 +56,22 @@ class CustomersDataTable extends DataTable
     public function html()
     {
         return $this->builder()
+                    ->parameters([
+                        'paging' => true,
+                        'searching' => true,
+                        'info' => false,
+                        'searchDelay' => 350,
+                        'language' => [
+                            'url' => url('js/dataTables/language.json')
+                        ],
+                        'createdRow' => "function(row, data, index) { 
+                            if ( data['balance'] < 0 ) {
+                                $('td', row).eq(2).addClass('negative');
+                            } else {
+                                $('td', row).eq(2).addClass('positive');
+                            }
+                        }",
+                    ])
                     ->setTableId('customers-table')
                     ->columns($this->getColumns())
                     ->minifiedAjax()
@@ -64,15 +93,14 @@ class CustomersDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            // Column::computed('action')
             //       ->exportable(false)
             //       ->printable(false)
-            //       ->width(60)
             //       ->addClass('text-center'),
-            // Column::make('id'),
             Column::make('name'),
             Column::make('address'),
             Column::make('balance'),
+            Column::computed('deposits'),
+            // Column::make('deposits'),
         ];
     }
 
