@@ -352,6 +352,21 @@ class="sidenav-main nav-expanded nav-lock nav-collapsible sidenav-dark gradient-
                 <li><a href="{{ url('/reports') }}"><i class="material-icons">radio_button_unchecked</i><span
                             data-i18n="Second level">Reports</span></a>
                 </li>
+                <li><a href="{{ route('reports.customers') }}"><i class="material-icons">radio_button_unchecked</i><span
+                            data-i18n="Second level">Customers</span></a>
+                </li>
+                <li><a href="{{ route('reports.customers') }}"><i class="material-icons">radio_button_unchecked</i><span
+                            data-i18n="Second level">Sales</span></a>
+                </li>
+                <li><a href="{{ route('reports.customers') }}"><i class="material-icons">radio_button_unchecked</i><span
+                            data-i18n="Second level">Products</span></a>
+                </li>
+                <li><a href="{{ route('reports.customers') }}"><i class="material-icons">radio_button_unchecked</i><span
+                            data-i18n="Second level">Sub Stores</span></a>
+                </li>
+                <li><a href="{{ route('reports.customers') }}"><i class="material-icons">radio_button_unchecked</i><span
+                            data-i18n="Second level">Lube Stores</span></a>
+                </li>
                 <!-- <li><a href="{{ url('/reports/lubebay/income-statement/') }}"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Second level">Lubebay Ledger</span></a>
                 </li>
                 <li><a href="{{ url('/reports/lubebay/income-statement/') }}"><i class="material-icons">radio_button_unchecked</i><span data-i18n="Second level">P & L</span></a>
