@@ -5,6 +5,10 @@
  */
 
 require('./bootstrap');
+import jsZip from 'jszip';
+
+// This line was the one missing
+window.JSZip = jsZip;
 
 window.Vue = require('vue');
 

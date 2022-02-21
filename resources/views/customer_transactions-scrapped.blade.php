@@ -9,7 +9,6 @@
         href="{{ asset('app-assets/vendors/data-tables/extensions/responsive/css/responsive.dataTables.min.css') }}">
     <link rel="stylesheet" type="text/css"
         href="{{ asset('app-assets/vendors/data-tables/css/select.dataTables.min.css') }}">
-        
     <!-- END: VENDOR CSS-->
     @parent()
 @endsection()
@@ -149,12 +148,6 @@
         <script src="{{ asset('app-assets/vendors/data-tables/js/dataTables.select.min.js') }}"></script>
         <!-- END PAGE VENDOR JS-->
 
-        <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.4.1/css/buttons.dataTables.min.css">
-<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/1.4.1/js/dataTables.buttons.min.js"></script>
-<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/1.4.1/js/buttons.flash.min.js"></script>
-<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/1.4.1/js/buttons.html5.min.js"></script>
-<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/1.4.1/js/buttons.print.min.js"></script>
-
 
         <!-- BEGIN PAGE LEVEL JS-->
         <!-- <script src="{{ asset('app-assets/js/scripts/data-tables.js') }}"></script> -->
@@ -173,10 +166,6 @@
                     "order": [
                         [5, 'dsc']
                     ],
-                    dom: 'Bfrtip',
-                    buttons: [
-                        'excelHtml5', 'print', 'csvHtml5'
-                    ]
                 });
 
                 // Row Grouping Table
