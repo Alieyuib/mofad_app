@@ -106,6 +106,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::any('/reports/sia/download/', 'ReportsController@stockInventoryAnalysis');
     Route::any('/reports', 'ReportsController@reports');
     Route::any('/reports/customers', 'ReportsController@customerReports')->name('reports.customers');
+    Route::any('/reports/sales', 'ReportsController@salesReports')->name('reports.sales');
     
     Route::any('/reports/sia/', 'ReportsController@stockInventoryAnalysisPage');
    

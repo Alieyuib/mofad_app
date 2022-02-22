@@ -2,15 +2,14 @@
 
 namespace App\DataTables;
 
-use App\Models\Customer;
+use App\Models\Transaction;
 use Yajra\DataTables\Html\Button;
 use Yajra\DataTables\Html\Column;
 use Yajra\DataTables\Html\Editor\Editor;
 use Yajra\DataTables\Html\Editor\Fields;
 use Yajra\DataTables\Services\DataTable;
 
-
-class CustomerDataTable extends DataTable
+class TransactionDataTable extends DataTable
 {
     /**
      * Build DataTable class.
@@ -22,18 +21,17 @@ class CustomerDataTable extends DataTable
     {
         return datatables()
             ->eloquent($query)
-            ->addColumn('action', 'customer.action');
+            ->addColumn('action', 'transaction.action');
     }
 
     /**
      * Get query source of dataTable.
      *
-     * @param \App\Models\Customer $model
+     * @param \App\Models\Transaction $model
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    public function query(Customer $model)
+    public function query(Transaction $model)
     {
-
         return $model->newQuery();
     }
 
@@ -45,7 +43,7 @@ class CustomerDataTable extends DataTable
     public function html()
     {
         return $this->builder()
-                    ->setTableId('customer-table')
+                    ->setTableId('transaction-table')
                     ->columns($this->getColumns())
                     ->minifiedAjax()
                     ->dom('Bfrtip')
@@ -86,6 +84,6 @@ class CustomerDataTable extends DataTable
      */
     protected function filename()
     {
-        return 'Customer_' . date('YmdHis');
+        return 'Transaction_' . date('YmdHis');
     }
 }
