@@ -29,6 +29,7 @@ use Datatables;
 use Illuminate\Support\Facades\Auth;
 use  Maatwebsite\Excel\Facades\Excel;
 use App\DataTables\CustomersDataTable;
+use App\DataTables\CustomerTransactionDataTable;
 
 class ReportsController extends Controller
 {
@@ -243,6 +244,11 @@ class ReportsController extends Controller
                 ->rawColumns(['action'])
                 ->make(true);
         }
+    }
+
+    
+    public function salesReports(CustomerTransactionDataTable $dataTable){
+        return $dataTable->render('reports.sales.reports');
     }
 
 

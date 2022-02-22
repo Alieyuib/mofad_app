@@ -21,12 +21,18 @@ class CustomersDataTable extends DataTable
     {
         return datatables()
             ->eloquent($query)
+            ->editColumn('name', function ($model) {
+                return '<td>
+                            <a href="'.url('/customer/transactions/'.$model->id).'">'.$model->name.'</a>
+                        </td>';
+            })
             ->editColumn('deposits', function ($model) {
                 return number_format($model->totalPurchases());
             })
             ->editColumn('balance', function ($model) {
                 return number_format($model->balance);
-            });
+            })
+            ->rawColumns(['name']);
     }
 
     /**
@@ -37,6 +43,7 @@ class CustomersDataTable extends DataTable
      */
     public function query(Customer $model)
     {
+        
         return $model->newQuery();
     }
 
@@ -69,7 +76,7 @@ class CustomersDataTable extends DataTable
                     ->orderBy(1)
                     ->buttons(
                         Button::make('export'),
-                        Button::make('print'),
+                        Button::make('pdf'),
                         Button::make('reset'),
                         Button::make('reload')
                     );

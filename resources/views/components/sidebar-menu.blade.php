@@ -355,7 +355,7 @@ class="sidenav-main nav-expanded nav-lock nav-collapsible sidenav-dark gradient-
                 <li><a href="{{ route('reports.customers') }}"><i class="material-icons">radio_button_unchecked</i><span
                             data-i18n="Second level">Customers</span></a>
                 </li>
-                <li><a href="{{ route('reports.customers') }}"><i class="material-icons">radio_button_unchecked</i><span
+                <li><a href="{{ route('reports.sales') }}"><i class="material-icons">radio_button_unchecked</i><span
                             data-i18n="Second level">Sales</span></a>
                 </li>
                 <li><a href="{{ route('reports.customers') }}"><i class="material-icons">radio_button_unchecked</i><span

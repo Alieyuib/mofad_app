@@ -11,6 +11,8 @@ use App\Models\CustomerTransaction;
 use App\Models\Substore;
 use App\Http\Controllers\Custom\AccountTransactionClass;
 use App\Helpers\PostStatusHelper;
+use DataTables;
+use Yajra\DataTables\Html\Builder;
 
 
 use App\Http\Controllers\Custom\CommitOrderTransaction;
@@ -100,6 +102,29 @@ class CustomerController extends Controller
 
     public function viewCustomerTransactions(Customer $customer){
         //return  Customer::find(4)->customerPrfs;
+        // dd($customer);
+        
+        
+        // $model = Customer::with('payments')->where('id',$customer->id);
+        // // dd($model);
+        
+        // if (request()->ajax()) {
+            //     return DataTables::of(CustomerTransaction::query()->with('customer')->where('customer_id',$customer->id))->toJson();
+            // }
+            
+            // $tabledata = DataTables::of(CustomerTransaction::query()->with('customer')->where('customer_id',$customer->id))->toJson();
+            // // dd($tabledata);
+            
+            // $html = $builder->columns([
+                //     ['data' => 'amount', 'name' => 'amount', 'title' => 'Name'],
+                //     ['data' => 'created_at', 'name' => 'created_at', 'title' => 'Created At'],
+                //     ['data' => 'updated_at', 'name' => 'updated_at', 'title' => 'Updated At'],
+                // ]);
+                // // dd($html);
+                // $view_data['payments'] =  $html;
+                
+                // dd($view_data);
+                
         $view_data['customer'] =  $customer;
         return view('customer_transactions', $view_data);
     }
