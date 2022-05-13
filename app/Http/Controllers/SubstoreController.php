@@ -20,6 +20,7 @@ use App\Models\Account;
 use App\Models\SubstoreInventory;
 use App\Helpers\PostStatusHelper;
 use App\User;
+use Alert;
 
 use App\Http\Controllers\Custom\AccountTransactionClass;
 use App\Http\Controllers\Custom\CommitSubstoreTransaction;
@@ -763,6 +764,38 @@ class SubstoreController extends Controller
         $view_data['stations_list'] = Auth::user()->allowedSubstores()->where('type',2);
         return view('stations_lubebays_summery_cards',$view_data);
     } 
+
+    public function viewStation2()
+    {
+        $view_data['stations_list'] = Substore::where('type', 2)->get();
+        return view('view_station', $view_data);
+    }
+
+    public function editStation($sid)
+    {
+        $view_data['station_edit_data'] = Substore::where('id', $sid)->get();
+        return view('edit_station', $view_data);
+    }
+
+    public function deleteStation($sid)
+    {
+        $view_data['station_delete_data'] = Substore::where('id', $sid)->get();
+
+        return view('station_delete_prompt', $view_data);
+    }
+
+    public function instDelete($sid, Request $request)
+    {
+        $deleted = Substore::where('id', $sid)->delete();
+        if ($deleted) {
+            $request->session()->flash('status', 'Station Deleted!');
+            return redirect('/stations/view');
+        }else{
+            $request->session()->flash('status', 'Error deleting station!');
+            return redirect('/stations/view');
+        }
+    }
+
     public function viewLubebayStores(){
         $view_data['stations_list'] = Auth::user()->allowedSubstores()->where('type',3);
         return view('stations_lubebays_summery_cards',$view_data);

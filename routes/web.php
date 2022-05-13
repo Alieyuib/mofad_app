@@ -20,6 +20,10 @@ Route::group(['middleware' => ['auth']], function() {
     Route::any('/customers', 'CustomerController@viewAllCustomers');
     Route::any('/customer/orders/{customer}', 'CustomerController@viewCustomerOrders');
     Route::any('/customer/transactions/{customer}', 'CustomerController@viewCustomerTransactions');
+    Route::any('/customer/edit/{customer}', 'CustomerController@customerEdit');
+    Route::any('/customer/edit/inst-edit/{customer}', 'CustomerController@instEdit');
+    Route::any('/customer/delete/{customer}', 'CustomerController@customerDelete');
+    Route::any('/customer/delete/inst-delete/{customer}', 'CustomerController@instDelete');
     Route::any('/customer/lodgment/{customer}', 'CustomerController@customerPayment');
     Route::any('customer/lodgement/confirmation', 'CustomerController@confirmCustomerLogement');
     Route::any('/approve-customer-lodgement', 'ApprovalController@customerLodgement');
@@ -30,6 +34,8 @@ Route::group(['middleware' => ['auth']], function() {
     
     Route::any('/create-pro', 'ProController@createPro')->middleware("permission:create_pro");
     Route::any('/view-pro', 'ProController@view');
+    Route::any('/pro/reverse_pro/{pro_reverser}', 'ProController@reversePro');
+    Route::any('/pro/reverse_pro/delete/inst-delete/{pro_reverser}', 'ProController@instReversePro');
     Route::any('/approve-pro', 'ApprovalController@pro');
     Route::any('/pro/view-details/{pro}', 'ProController@viewProDetails');
     Route::any('/pro/store-keeper', 'ProController@proStorekeeper');
@@ -112,8 +118,15 @@ Route::group(['middleware' => ['auth']], function() {
    
 
     Route::any('/stations', 'SubstoreController@viewStations');
+    Route::any('/stations/view', 'SubstoreController@viewStation2');
+    Route::any('/stations/edit/{station}', 'SubstoreController@editStation');
+    Route::any('/stations/delete/{station}', 'SubstoreController@deleteStation');
+    Route::any('/station/delete/inst-delete/{station}', 'SubstoreController@instDelete');
     Route::any('/lubebay/stores', 'SubstoreController@viewLubebaysStores');
     Route::any('/lubebays', 'LubebayController@viewLubebays');
+    Route::any('/lubebays/view', 'LubebayController@lubebays');
+    Route::any('/lubebay/delete/{lubebay}', 'LubebayController@deleteLubebay');
+    Route::any('/lubebay/delete/inst-delete/{lubebay}', 'LubebayController@instDeleteLubebay');
     Route::any('/states', 'DashboardController@viewStates');
     Route::any('/warehouses', 'DashboardController@viewWarehouses');
 

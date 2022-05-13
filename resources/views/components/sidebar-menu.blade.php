@@ -224,6 +224,10 @@ class="sidenav-main nav-expanded nav-lock nav-collapsible sidenav-dark gradient-
                     class="menu-title" data-i18n="Menu levels">Station</span></a>
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
+                    <li><a href="{{ url('/stations/view') }}"><i
+                                class="material-icons">radio_button_unchecked</i><span
+                                data-i18n="Second level">View Stations</span></a>
+                    </li>
                     @can('post_substore_sales')
                         <li><a href="{{ url('/substore/days-transactions/submit') }}"><i
                                     class="material-icons">radio_button_unchecked</i><span
@@ -256,6 +260,10 @@ class="sidenav-main nav-expanded nav-lock nav-collapsible sidenav-dark gradient-
                     data-i18n="Menu levels">Lube Bay</span></a>
             <div class="collapsible-body">
                 <ul class="collapsible collapsible-sub" data-collapsible="accordion">
+                     <li><a href="{{ url('/lubebays/view') }}"><i
+                                    class="material-icons">radio_button_unchecked</i><span
+                                    data-i18n="Second level">Lubebay</span></a>
+                        </li>
                     @can('post_lubebay_sales')
                         <li><a href="{{ url('/lubebay/days-transactions/submit') }}"><i
                                     class="material-icons">radio_button_unchecked</i><span

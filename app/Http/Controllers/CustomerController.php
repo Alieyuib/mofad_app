@@ -16,6 +16,8 @@ use Yajra\DataTables\Html\Builder;
 
 
 use App\Http\Controllers\Custom\CommitOrderTransaction;
+// use Symfony\Component\HttpFoundation\Session\Session;
+
 
 class CustomerController extends Controller
 {
@@ -90,7 +92,7 @@ class CustomerController extends Controller
 
     public function viewAllCustomers(){
         //return Customer::find(4)->customerType;
-        $view_data['customers'] =  Customer::whereIn('state',json_decode(Auth::user()->accessibleEntities()->states) )->get();
+        $view_data['customers'] =  Customer::whereIn('state',json_decode(Auth::user()->accessibleEntities()->states) )->where('customer_type', 1)->get();
         return view('view_all_customers', $view_data);
     }
 
@@ -180,5 +182,62 @@ class CustomerController extends Controller
         
         $view_data['customer_payment_transactions'] = CustomerTransaction::where('transaction_type','CREDIT')->whereIn('customer_id',$direct_sales_customers_array)->get();
         return view('customer_lodgement_history', $view_data);
+    }
+
+    public function customerEdit($cid)
+    {
+        $view_data['customer_edit_data'] = Customer::where('id', $cid)->get();
+        return view('edit_customer', $view_data);
+    }
+
+    public function instEdit($cid, Request $request)
+    {
+        $fullname = $request->input('edit_name');
+        $email = $request->input('edit_email');
+        $phone = $request->input('edit_phone');
+        $address = $request->input('edit_address');
+
+        $state = '';
+
+        if($request->input('state') == 'Kano') {
+            $state = 1;
+        }elseif($request->input('state') == 'Abuja'){
+            $state = 2;
+        }
+
+        $edit_customer = Customer::where('id', $cid)->update([
+            "name" => $fullname,
+            "address" => $address,
+            "email" => $email,
+            "phone" => $phone,
+            "state" => $state,
+        ]);
+
+        if ($edit_customer) {
+            $request->session()->flash('status', 'Customer Edit!');
+            return redirect('/customers');
+        }else{
+            $request->session()->flash('status', 'Error editing customer!');
+            return redirect('/customers');
+        }
+
+    }
+
+    public function customerDelete($cid)
+    {
+        $view_data['customer_delete_data'] = Customer::where('id', $cid)->get();
+        return view('delete_customer', $view_data);
+    }
+
+    public function instDelete($cid, Request $request)
+    {
+        $deleted = Customer::where('id', $cid)->delete();
+        if ($deleted) {
+            $request->session()->flash('status', 'Customer deleted!');
+            return redirect('/customers');
+        }else{
+            $request->session()->flash('status', 'Customer not deleted!');
+            return redirect('/customers');
+        }
     }
 }

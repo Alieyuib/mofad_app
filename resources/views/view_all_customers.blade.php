@@ -31,6 +31,11 @@
                         <!-- DataTables example -->
                         <div class="row">
                             <div class="col s12 m12 l12">
+                              @if (session()->has('status'))
+                                  <div class="alert alert-success">
+                                      {{  session('status') }}
+                                  </div>
+                              @endif
                                 <div id="button-trigger" class="card card card-default scrollspy">
                                     <div class="card-content">
                                         <h4 class="card-title">Customers</h4>
@@ -65,6 +70,9 @@
                                                     
                                                     <th>
                                                       Status
+                                                    </th>
+                                                    <th>
+                                                      Actions 
                                                     </th>
                                                   </thead>
                                                   <tbody>
@@ -103,6 +111,10 @@
                                                           @else
                                                           Active
                                                           @endif
+                                                      </td>
+                                                      <td class="action-btn-row">
+                                                         <a class="btn-edit" href="{{url('customer/edit/'.$customer->id)}}"><i class="fa fa-edit"></i></a>
+                                                          <a class="btn-delete" href="{{url('customer/delete/'.$customer->id)}}"><i class="fa fa-times"></i></a>
                                                       </td>
                                                     </tr>
                                                     @endforeach

@@ -16,6 +16,7 @@ use App\Models\Customer;
 use App\Models\WarehouseInventory;
 use App\Http\Controllers\Custom\CommitOrderTransaction;
 use App\Helpers\PostStatusHelper;
+use App\Models\Prf;
 use App\User;
 
 use App\Notifications\ProNotification;
@@ -264,5 +265,29 @@ class ProController extends Controller
     public function viewProDetails(Pro $pro){
         $view_data['pro'] = $pro;
         return view('view_pro_details', $view_data);
+    }
+
+
+    public function reversePro($pro_id)
+    {
+        $view_data['pro_reverse'] = Prf::where('id', $pro_id)->get();
+
+        return view('pro_prompt_delete', $view_data);
+
+    }
+
+    public function instReversePro($pro_id, Request $request)
+    {
+        $pro_reverse = Prf::where('id', $pro_id)->delete();
+
+        if ($pro_reverse) {
+            $request->session()->flash('status', 'PRO Reversed Successfully!!!');
+            redirect('/view-pro');
+        }else{
+            $request->session()->flash('status', 'PRO Reversal Unsuccessful!!!');
+            redirect('/view-pro');
+        }
+
+
     }
 }

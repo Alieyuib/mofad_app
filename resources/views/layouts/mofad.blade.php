@@ -15,6 +15,8 @@
         <link rel="apple-touch-icon" href="{{ asset('app-assets/images/favicon/apple-touch-icon-152x152.png') }}">
         <link rel="shortcut icon" type="image/x-icon" href="{{ asset('app-assets/images/favicon/favicon-32x32.') }}png">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         @include('includes.main-css')
     @show
 </head>
@@ -34,7 +36,20 @@
     @include('components.sidebar-menu')
     @show
     <!-- END: SideNav-->
+    <script type="application/javascript">
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        })
 
+    </script>
     <!-- BEGIN: Page Main-->
     <div id="main">
         <div class="row">

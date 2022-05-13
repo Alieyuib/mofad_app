@@ -23,6 +23,16 @@
       @include('includes.post_status')
       <div class="col s12">
                 <div class="container">
+                    @if (session()->has('status'))
+                        <script type="application/javascript">
+                            Swal.fire({
+                                icon: 'success',
+                                // title: 'Oops...',
+                                text: 'PRO Reversed Successfully!!!',
+                                // footer: '<a href="">Why do I have this issue?</a>'
+                            })
+                        </script>
+                    @endif
                     <div class="section section-data-tables">
                         <div class="card">
                             <div class="card-content">
@@ -69,6 +79,9 @@
                                                             @endcan
                                                             <th>
                                                             Status
+                                                            </th>
+                                                            <th>
+                                                                Action
                                                             </th>
                                                         </tr>
                                                     </thead>
@@ -125,6 +138,9 @@
                                                         
                                                         <td>
                                                             {{$pro->approval_status}}
+                                                        </td>
+                                                        <td>
+                                                            <a href="{{url('/pro/reverse_pro/'.$pro->id)}}">Reverse Pro</a>
                                                         </td>
                                                         </tr>
                                                     @endforeach

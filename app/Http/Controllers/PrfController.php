@@ -159,7 +159,7 @@ class PrfController extends Controller
 
                 DB::rollback();
                 $post_status = "FAILED";
-                $post_status_message = $e->getMessage;
+                // $post_status_message = $e->getMessage;
                 
 
                 $view_data['post_status'] = $post_status;
@@ -352,10 +352,6 @@ class PrfController extends Controller
         $view_data['post_status_message'] = $post_status->post_status_message;
 
         return view('admin_reverse_prf',$view_data);
-
-
-
-
 
     }
 

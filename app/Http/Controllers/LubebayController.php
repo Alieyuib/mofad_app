@@ -354,4 +354,29 @@ class LubebayController extends Controller
     public function viewlubebay(Lubebay $lubebay){
         $view_data['lst_list'] =  LubebayServiceTransaction::where('lubebay_id',$lubebay->id)->whereBetween('created_at',[now()->startOfMonth , now()->endOfMonth])->get();
     }
+
+    public function lubebays()
+    {
+        $view_data['lubebay_list'] = Lubebay::all();
+
+        return view('view_lubebay', $view_data);
+    }
+
+    public function deleteLubebay($lid)
+    {
+        $view_data['lubebay_delete_data'] = Lubebay::where('id', $lid)->get();
+        return view('lubebay_delete_prompt', $view_data);
+    }
+
+    public function instDeleteLubebay($cid, Request $request)
+    {
+        $lubebay_delete = Lubebay::where('id', $cid)->delete();
+        if ($lubebay_delete) {
+            $request->session()->flash('status', 'Lubebay Deleted!');
+            return redirect('/lubebays/view');
+        }else{
+            $request->session()->flash('status', 'Error Deleting!');
+            return redirect('/lubebays/view');
+        }
+    }
 }
