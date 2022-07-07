@@ -343,17 +343,33 @@ class PrfController extends Controller
         $commit_order_transactions = New CommitOrderTransaction;
         $post_status =  New PostStatusHelper;
         if($commit_order_transactions->prfStockCollectionReversal($prf->id)){
+
             $post_status->success();
         }
         else{
             $post_status->failed();
         }
-        $view_data['post_status'] = $post_status->post_status;
-        $view_data['post_status_message'] = $post_status->post_status_message;
+        $delete_prf = $prf_list = Prf::withTrashed()->where('id', $prf->id)->whereIn('warehouse_id',json_decode(Auth::user()->accessibleEntities()->warehouses))->delete();
 
-        return view('admin_reverse_prf',$view_data);
+        if ($delete_prf) {
+
+            $view_data['post_status'] = $post_status->post_status;
+            $view_data['post_status_message'] = $post_status->post_status_message;
+            $request->session()->flash('deleted', '');
+            $request->session()->flash('delete_row', '');
+            return redirect('/view-prf');
+
+        }else {
+
+            $view_data['post_status'] = $post_status->post_status;
+            $view_data['post_status_message'] = $post_status->post_status_message;
+            $request->session()->flash('not-deleted', '');
+            return redirect('/view-prf');
+
+        }
 
     }
+
 
     // stock return feature developement halted
     public function stockReturn( Request $request){
@@ -527,5 +543,25 @@ class PrfController extends Controller
     }
 
     // end of stock return feature
+
+
+    // public function reversePrf(Prf $prf, Request $request){
+
+    //     $prf_list = Prf::where('APPROVAL_STATUS','APPROVED_COLLECTED')->get();
+    //     $view_data['prf_list'] = $prf_list;
+    //     $commit_order_transactions = New CommitOrderTransaction;
+    //     $post_status =  New PostStatusHelper;
+    //     if($commit_order_transactions->prfStockCollectionReversal($prf->id)){
+    //         $post_status->success();
+    //     }
+    //     else{
+    //         $post_status->failed();
+    //     }
+    //     $view_data['post_status'] = $post_status->post_status;
+    //     $view_data['post_status_message'] = $post_status->post_status_message;
+
+    //     return redirect('/view-prf');
+
+    // }
 
 }

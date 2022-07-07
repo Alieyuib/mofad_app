@@ -42,6 +42,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::any('/pro/store-keeper/{pro}', 'ProController@proReceiveGoods');
     Route::any('/create-prf', 'PrfController@createPrf')->middleware("permission:create_prf");
     Route::any('/view-prf', 'PrfController@view');
+    Route::any('/view-prf/reverse-prf/{prf_id}', 'PrfController@reversePrf');
     Route::any('/approve-prf', 'ApprovalController@prf');
     Route::any('/prf/store-keeper', 'PrfController@prfStorekeeper');
     Route::any('/prf/payment/{prf}', 'PrfController@prfPayment');
@@ -52,8 +53,9 @@ Route::group(['middleware' => ['auth']], function() {
 
    
     Route::any('/substore/days-transactions/view', 'SubstoreController@viewTransactions');
+    Route::any('/admin/sst/reverse-sst/final-reverse', 'SubstoreController@reverseSubstoreSales');
     Route::any('lubebay/substore/days-transactions/view', 'SubstoreController@viewLubebaySubstoreTransactions');
-
+    Route::any('/service-center/days-transactions/reverse-transaction/{reverse_id}', 'SubstoreController@reverseSubstoreTransaction');
     Route::any('/sst/view-details/{sst}', 'SubstoreController@sstDetails');
     Route::any('/substore/days-transactions/submit', 'SubstoreController@transactionsEntry');
     Route::any('/lubebay/substore/days-transactions/submit', 'SubstoreController@lubebaySubstoreTransactionsEntry');//
@@ -62,8 +64,9 @@ Route::group(['middleware' => ['auth']], function() {
     Route::any('/substore/lodgement-history/{substore}', 'SubstoreController@substoreSalesLodgementHistory');
     Route::any('/substore/lodgement/confirmation/{substore}', 'SubstoreController@substoreLodgementHistory');
     Route::any('/substore/lodgement', 'SubstoreController@substoreLodgementStations');
-
-    Route::any('/lubebay/substore/lodgement', 'SubstoreController@substoreLodgementLubebays');//
+    Route::any('/substore/lodgement/reverse-lodgement/{lodgement_id}', 'SubstoreController@substoreLodgementReversal__');
+    
+    Route::any('/lubebay/substore/lodgement', 'SubstoreController@substoreLodgementLubebays');
     Route::any('/substore/inventory/{substore}', 'SubstoreController@substoreInventory');
     Route::any('/substore/inventory', 'SubstoreController@substoreInventoryStoresList');
     Route::any('/substore/inventory/{substore}/{product}', 'SubstoreController@substoreProductBincard');
@@ -72,6 +75,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::any('/approve-substore-lodgement', 'ApprovalController@substoreLodgement');
     
     Route::any('/lubebay/days-transactions/view', 'LubebayController@viewTransactions');
+    Route::any('/lubebay/days-transactions/reverse-transaction/{reverse_id}', 'LubebayController@reverseTransaction');
     Route::any('/lst/view-details/{lst}', 'LubebayController@lstDetails');
     Route::any('/lubebay/days-transactions/submit', 'LubebayController@transactionsEntry');
     Route::any('/approve-lst', 'ApprovalController@lst');
@@ -182,6 +186,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::any('/admin/lubebay-services/create-service', 'ServiceController@createLubebayService');
     Route::any('/admin/lubebay-services/edit-service/{service}', 'ServiceController@editLubebayService');
     Route::any('/admin/lubebay-services/delete-service/{service}', 'ServiceController@deleteLubebayService');
+    Route::any('/admin/sst/reverse-sst/{sst}', 'SubstoreController@sstInitialReversal');
 
 
 });

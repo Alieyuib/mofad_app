@@ -379,4 +379,19 @@ class LubebayController extends Controller
             return redirect('/lubebays/view');
         }
     }
+
+    public function reverseTransaction($reverse_id, Request $request)
+    {
+        // return LubebayServiceTransaction::where('id', $reverse_id)->get();
+        $reverse_services = LubebayServiceTransaction::where('id', $reverse_id)->delete();
+
+        if ($reverse_services) {
+            $request->session()->flash('status', '');
+            return redirect('/lubebay/days-transactions/view');
+        }else {
+            $request->session()->flash('status_error', '');
+            return redirect('/lubebay/days-transactions/view');
+        }
+
+    }
 }

@@ -19,12 +19,22 @@
       <!-- End Navbar -->
       @section('content')
       @include('includes.post_status')     
+      @if (session()->has('status'))
+          <script type="application/javascript">
+              Swal.fire({
+                  icon: 'success',
+                  // title: 'Oops...',
+                  text: 'Sales Reversal Successfully',
+                  // footer: '<a href="">Why do I have this issue?</a>'
+              })
+          </script>
+      @endif
       <div class="col s12">
                 <div class="container">
                     <div class="section section-data-tables">
                         <div class="card">
                             <div class="card-content">
-                                <p class="caption mb-0">Station/Lubebay Sales</p>
+                                <p class="caption mb-0">Service Center Sales</p>
                             </div>
                         </div>
                         <!-- DataTables example -->
@@ -59,6 +69,9 @@
                                                   <th>
                                                     Confirmation
                                                   </th>
+                                                  {{-- <th>
+                                                    Action
+                                                  </th> --}}
                                                 </thead>
                                                 <tbody>
                                                     @foreach($sst_list as $sst)
@@ -72,7 +85,7 @@
                                                     {{$sst->amount}}
                                                     </td>
                                                     <td>
-                                                    {{$sst->substore->name}}
+                                                    {{$sst->substore['name']}}
                                                     </td>
                                                     <td>
                                                     {{$sst->createdBy->name}}
@@ -98,8 +111,15 @@
                                                     @endif
                                                           
                                                     </td>
+                                                    {{-- <td>
+                                                      @if ($sst->approval_status == 'AWAITING_CONFIRMATION')
+                                                          <a href="#" aria-disabled="disable">No Action</a>
+                                                      @else
+                                                      <a href="{{ url('/admin/sst/reversal/'.$sst->id) }}">Reverse Sales</a>
+                                                      @endif
+                                                    </td>
                                                     
-                                                    
+                                                     --}}
                                                   </tr>
                                                   @endforeach
                                                 </tbody>

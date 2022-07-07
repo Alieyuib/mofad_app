@@ -802,6 +802,7 @@ class SubstoreController extends Controller
     } 
 
     public function substoreLodgementHistory(Substore $substore){
+
         $view_data['substore'] = $substore;
         
 
@@ -1041,5 +1042,81 @@ class SubstoreController extends Controller
         $view_data['product'] = $product;
         $view_data['substore'] = $substore;
         return view('substore_product_bincard', $view_data);
+    }
+
+    public function reverseSubstoreTransaction($reverse_id, Request $request)
+    {
+        // $reverse_sales = SubstoreTransaction::where('id', $reverse_id)->get();
+
+        $reverse_sales = SubstoreTransaction::where('id', $reverse_id)->delete();
+
+        if ($reverse_sales) {
+            $request->session()->flash('status', '');
+            return redirect('lubebay/substore/days-transactions/view');
+        }else {
+            $request->session()->flash('status_error', '');
+            return redirect('lubebay/substore/days-transactions/view');
+        }
+
+    }
+
+    public function substoreLodgementReversal__($lodgement_id, Request $request)
+    {
+        // $lodgement_id = $request->input('reverse_id');
+        $substore_id = $request->input('substore_id');
+
+        // return $lodgement_id. ' ' .$substore_id;
+
+
+        // // $substore_data = Substore::where('id', $substore_id)->get();
+
+        return SubstoreTransaction::where('id', $substore_id)->get();
+
+    }
+
+
+    public function sstInitialReversal( Request $request, SubstoreTransaction $sst){
+        $view_data = [];
+        $sstId = $request->input('reverse_id');
+        $view_data['substore_id'] = $request->input('substore_id');
+        $sst_list = SubstoreTransaction::where('APPROVAL_STATUS','CONFIRMED')->where('comment',null)->where('id', $sstId)->get();
+        $view_data['sst_list'] = $sst_list;
+
+        // return $sst_list;
+        
+
+        $view_data['products'] = Product::all()->whereIn('id',SubstoreInventory::all()->pluck('product_id')->toArray());
+        $view_data['products'] = Product::all();
+    //     $view_data['substores'] =  Auth::user()->allowedSubstores()->where('type',2);
+    //     //$view_data['customers'] = Customer::where();
+    //     $post_status = "NONE";
+    //     $post_status_message = "NONE";
+    //     $view_data['post_status'] = $post_status;
+    //     $view_data['post_status_message'] = $post_status_message;
+           
+        $order_snapshot = [];    
+        $customer = $sst->substore->customerProfile;
+        $order_total = 0;
+        
+        
+        $order_snapshot = $sst->sales_snapshot;
+        
+
+        $substore = $sst->substore;
+
+        $reverse_products = $order_snapshot;
+        $view_data['sstId'] = $request->input('reverse_id');
+        $view_data['array_products'] = json_decode($reverse_products);
+
+        
+        return view('sstReversal', $view_data);
+
+        // return $view_data['array_products'];
+
+    }
+
+    public function reverseSubstoreSales(Request $request)
+    {
+        return $request->input('product_name');
     }
 }

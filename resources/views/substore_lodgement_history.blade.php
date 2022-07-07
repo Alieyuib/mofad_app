@@ -71,7 +71,9 @@
                                                       <td>
                                                         Status
                                                       </td>
-                                                                                                     
+                                                      <th>
+                                                        Action  
+                                                      </th>                                            
                                                     
                                                   </thead>
                                                   <tbody>
@@ -122,7 +124,17 @@
                                                       <td>
                                                         {{$lodgment->approval_status}}
                                                       </td>
-                                                      
+                                                      <td>
+                                                      @if ($lodgment->approval_status == 'AWAITING_CONFIRMATION')
+                                                          <a href="#" aria-disabled="disable">No Action</a>
+                                                      @else
+                                                          <form action="{{ url('/substore/lodgement/reverse-lodgement/'.$lodgment->id) }}">
+                                                            <input type="hidden" name="reverse_id" value="{{ $lodgment->id }}">
+                                                            <input type="hidden" name="substore_id" value="{{ $substore->id }}">
+                                                            <input type="submit" value="Reverse Lodgement" class="btn btn-success">
+                                                          </form>
+                                                      @endif
+                                                    </td>
                                                 
                                                     </tr>
                                                     @endforeach

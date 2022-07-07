@@ -87,6 +87,13 @@ class="sidenav-main nav-expanded nav-lock nav-collapsible sidenav-dark gradient-
                     <li><a href="{{ url('view-prf') }}"><i class="material-icons">radio_button_unchecked</i><span
                                 data-i18n="Second level">View/Approve PRF</span></a>
                     </li>
+                    <li><a href="{{ url('/admin/prf/reversal') }}"><i class="material-icons">radio_button_unchecked</i><span
+                        data-i18n="Second level">PRF Reversal</span></a>
+                    </li>
+                    {{-- <li><a href="{{ url('/admin/prf/reversal') }}"><i
+                        class="material-icons">radio_button_unchecked</i><span data-i18n="Second level">Prf
+                        Reversal</span></a>
+                    </li> --}}
 
 
                     @can('create_prf')
@@ -292,6 +299,13 @@ class="sidenav-main nav-expanded nav-lock nav-collapsible sidenav-dark gradient-
                                 class=" text-wrap">Confirm Lubricant Sale</span></a>
                     </li>
 
+                    <li>
+                        <a href="{{ url('/admin/sst/reversal') }}">
+                        <i class="material-icons">radio_button_unchecked</i>
+                        <span data-i18n="Second level">Sales Reversal</span>
+                        </a>
+                    </li>
+
                     <li><a href="{{ url('/lubebay/substore/lodgement') }}"><i
                                 class="material-icons">radio_button_unchecked</i><span
                                 data-i18n="Second level">Lubricant Lodgements</span></a>
@@ -460,14 +474,14 @@ class="sidenav-main nav-expanded nav-lock nav-collapsible sidenav-dark gradient-
                                 class="material-icons">radio_button_unchecked</i><span
                                 data-i18n="Second level">Inventory Adjustment</span></a>
                     </li>
-                    <li><a href="{{ url('/admin/prf/reversal') }}"><i
+                    {{-- <li><a href="{{ url('/admin/prf/reversal') }}"><i
                                 class="material-icons">radio_button_unchecked</i><span data-i18n="Second level">Prf
                                 Reversal</span></a>
                     </li>
                     <li><a href="{{ url('/admin/sst/reversal') }}"><i
                                 class="material-icons">radio_button_unchecked</i><span
                                 data-i18n="Second level">Substore sales reversal</span></a>
-                    </li>
+                    </li> --}}
                     <li><a href="{{ url('/warehouse/stock-transfer') }}"><i
                                 class="material-icons">radio_button_unchecked</i><span data-i18n="Second level">WH
                                 Stock Transfer</span></a>

@@ -87,7 +87,7 @@
                                                      
                                                       @if(!$sst->reversed())
                                                       <td>
-                                                            <a href="{{url('admin/sst/reversal/'.$sst->id)}}">Reverse </a>
+                                                            <a href="{{url('/admin/sst/reversal/'.$sst->id)}}">Reverse </a>
                                                       </td>
                                                       @else
                                                       <td>

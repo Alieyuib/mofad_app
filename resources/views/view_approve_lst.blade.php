@@ -19,6 +19,16 @@
       <!-- End Navbar -->
       @section('content')
       @include('includes.post_status')
+      @if (session()->has('status'))
+          <script type="application/javascript">
+              Swal.fire({
+                  icon: 'success',
+                  // title: 'Oops...',
+                  text: 'Service Reversal Successfully',
+                  // footer: '<a href="">Why do I have this issue?</a>'
+              })
+          </script>
+      @endif
       <div class="col s12">
                 <div class="container">
                     <div class="section section-data-tables">
@@ -61,6 +71,9 @@
                                                   <th>
                                                     Confiramtion
                                                   </th>
+                                                  <th>
+                                                    Action
+                                                  </th>
                                                 </thead>
                                                 <tbody>
                                                     @foreach($lst_list as $lst)
@@ -94,6 +107,16 @@
                                                         
                                                         @endif
                                                           
+                                                    </td>
+                                                    <td>
+                                                      @if ($lst->approval_status == 'AWAITING_CONFIRMATION')
+                                                          <a href="#" aria-disabled="disable">No Action</a>
+                                                      @else
+                                                          <form action="{{ url('/lubebay/days-transactions/reverse-transaction/'.$lst->id) }}">
+                                                            <input type="hidden" name="reverse_id" value="{{ $lst->id }}">
+                                                            <input type="submit" value="Reverse Service" class="btn btn-success">
+                                                          </form>
+                                                      @endif
                                                     </td>
                                                     
                                                     

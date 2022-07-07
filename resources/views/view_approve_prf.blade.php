@@ -20,6 +20,26 @@
       <!-- End Navbar -->
       @section('content')
       @include('includes.post_status')
+      @if (session()->has('deleted'))
+          <script type="application/javascript">
+              Swal.fire({
+                  icon: 'success',
+                  // title: 'Oops...',
+                  text: 'Prf Reversal Successfully',
+                  // footer: '<a href="">Why do I have this issue?</a>'
+              })
+          </script>
+      @endif
+      @if (session()->has('not-deleted'))
+          <script type="application/javascript">
+              Swal.fire({
+                  icon: 'success',
+                  // title: 'Oops...',
+                  text: 'Prf Reversal Unsuccessfully',
+                  // footer: '<a href="">Why do I have this issue?</a>'
+              })
+          </script>
+      @endif
       <div class="col s12">
                 <div class="container">
                     <div class="section section-data-tables">
@@ -61,11 +81,11 @@
                                                     <th>
                                                       Date
                                                     </th>
-                                                    @can('approve_prf_l1')
+                                                    {{-- @can('approve_prf_l1')
                                                     <th>
                                                       Supervisor Approval
                                                     </th>
-                                                    @endcan
+                                                    @endcan --}}
                                                     @can('approve_prf_l2')
                                                     <th>
                                                       Final Approval
@@ -74,6 +94,9 @@
                                                     <th>
                                                       Status
                                                     </th>
+                                                    {{-- <th>
+                                                      Action
+                                                    </th> --}}
                                                   </thead>
                                                   <tbody>
                                                       @foreach($prf_list as $prf)
@@ -98,7 +121,7 @@
                                                       <td>
                                                       {{$prf->created_at}}
                                                       </td>
-                                                      @can('approve_prf_l1')
+                                                      {{-- @can('approve_prf_l1')
                                                       <td>
                                                         
                                                           @if($prf->approval->l1!=0)
@@ -116,7 +139,7 @@
                                                           @endif
                                                       
                                                       </td>
-                                                      @endcan
+                                                      @endcan --}}
                                                       @can('approve_prf_l2')
                                                       <td>
                                                         @if($prf->approval->l2!=0)
@@ -138,6 +161,15 @@
                                                       <td>
                                                           {{$prf->approval_status}}
                                                       </td>
+                                                      {{-- @if ($prf->approval_status=='APPROVED_COLLECTED')
+                                                        <td>
+                                                          <a href="{{url('admin/prf/reversal/'.$prf->id)}}">Reverse </a>
+                                                        </td>
+                                                      @else
+                                                          <td>
+                                                            <a href="#">No Action</a>
+                                                          </td>
+                                                      @endif --}}
                                                     </tr>
                                                     @endforeach
                                                   </tbody>

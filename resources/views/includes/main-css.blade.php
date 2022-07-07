@@ -140,6 +140,12 @@
             .table.dataTable tbody{
                 background-color: black !important;
             }
+
+            .reverse_btn{
+                margin-bottom: 10px !important;
+                margin-left: 30px !important;
+            }
+            
         </style>
 
 
